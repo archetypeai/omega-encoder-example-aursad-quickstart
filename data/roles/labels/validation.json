@@ -1,0 +1,635 @@
+{
+ "role": "validation",
+ "operations": [
+  {
+   "file": "validation_0947.csv",
+   "sample_nr": 947,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_0955.csv",
+   "sample_nr": 955,
+   "class": "damaged_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_0969.csv",
+   "sample_nr": 969,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_0983.csv",
+   "sample_nr": 983,
+   "class": "missing_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_0995.csv",
+   "sample_nr": 995,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_0997.csv",
+   "sample_nr": 997,
+   "class": "extra_component",
+   "session": 5
+  },
+  {
+   "file": "validation_1007.csv",
+   "sample_nr": 1007,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1027.csv",
+   "sample_nr": 1027,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1043.csv",
+   "sample_nr": 1043,
+   "class": "extra_component",
+   "session": 5
+  },
+  {
+   "file": "validation_1067.csv",
+   "sample_nr": 1067,
+   "class": "extra_component",
+   "session": 5
+  },
+  {
+   "file": "validation_1071.csv",
+   "sample_nr": 1071,
+   "class": "missing_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_1073.csv",
+   "sample_nr": 1073,
+   "class": "missing_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_1083.csv",
+   "sample_nr": 1083,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1099.csv",
+   "sample_nr": 1099,
+   "class": "missing_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_1101.csv",
+   "sample_nr": 1101,
+   "class": "extra_component",
+   "session": 5
+  },
+  {
+   "file": "validation_1113.csv",
+   "sample_nr": 1113,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1117.csv",
+   "sample_nr": 1117,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1165.csv",
+   "sample_nr": 1165,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1183.csv",
+   "sample_nr": 1183,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1199.csv",
+   "sample_nr": 1199,
+   "class": "damaged_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_1215.csv",
+   "sample_nr": 1215,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1227.csv",
+   "sample_nr": 1227,
+   "class": "damaged_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_1239.csv",
+   "sample_nr": 1239,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1241.csv",
+   "sample_nr": 1241,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1253.csv",
+   "sample_nr": 1253,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1261.csv",
+   "sample_nr": 1261,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1275.csv",
+   "sample_nr": 1275,
+   "class": "missing_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_1281.csv",
+   "sample_nr": 1281,
+   "class": "normal",
+   "session": 5
+  },
+  {
+   "file": "validation_1285.csv",
+   "sample_nr": 1285,
+   "class": "missing_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_1289.csv",
+   "sample_nr": 1289,
+   "class": "damaged_screw",
+   "session": 5
+  },
+  {
+   "file": "validation_1294.csv",
+   "sample_nr": 1294,
+   "class": "damaged_screw",
+   "session": 6
+  },
+  {
+   "file": "validation_1300.csv",
+   "sample_nr": 1300,
+   "class": "normal",
+   "session": 6
+  },
+  {
+   "file": "validation_1322.csv",
+   "sample_nr": 1322,
+   "class": "damaged_screw",
+   "session": 6
+  },
+  {
+   "file": "validation_1338.csv",
+   "sample_nr": 1338,
+   "class": "damaged_screw",
+   "session": 6
+  },
+  {
+   "file": "validation_1342.csv",
+   "sample_nr": 1342,
+   "class": "missing_screw",
+   "session": 6
+  },
+  {
+   "file": "validation_1344.csv",
+   "sample_nr": 1344,
+   "class": "normal",
+   "session": 6
+  },
+  {
+   "file": "validation_1348.csv",
+   "sample_nr": 1348,
+   "class": "normal",
+   "session": 6
+  },
+  {
+   "file": "validation_1350.csv",
+   "sample_nr": 1350,
+   "class": "normal",
+   "session": 6
+  },
+  {
+   "file": "validation_1360.csv",
+   "sample_nr": 1360,
+   "class": "normal",
+   "session": 6
+  },
+  {
+   "file": "validation_1388.csv",
+   "sample_nr": 1388,
+   "class": "normal",
+   "session": 6
+  },
+  {
+   "file": "validation_1414.csv",
+   "sample_nr": 1414,
+   "class": "normal",
+   "session": 6
+  },
+  {
+   "file": "validation_1426.csv",
+   "sample_nr": 1426,
+   "class": "missing_screw",
+   "session": 6
+  },
+  {
+   "file": "validation_1428.csv",
+   "sample_nr": 1428,
+   "class": "missing_screw",
+   "session": 6
+  },
+  {
+   "file": "validation_1436.csv",
+   "sample_nr": 1436,
+   "class": "normal",
+   "session": 6
+  },
+  {
+   "file": "validation_1444.csv",
+   "sample_nr": 1444,
+   "class": "normal",
+   "session": 6
+  },
+  {
+   "file": "validation_1479.csv",
+   "sample_nr": 1479,
+   "class": "extra_component",
+   "session": 7
+  },
+  {
+   "file": "validation_1493.csv",
+   "sample_nr": 1493,
+   "class": "damaged_screw",
+   "session": 7
+  },
+  {
+   "file": "validation_1497.csv",
+   "sample_nr": 1497,
+   "class": "damaged_screw",
+   "session": 7
+  },
+  {
+   "file": "validation_1525.csv",
+   "sample_nr": 1525,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1535.csv",
+   "sample_nr": 1535,
+   "class": "extra_component",
+   "session": 7
+  },
+  {
+   "file": "validation_1549.csv",
+   "sample_nr": 1549,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1557.csv",
+   "sample_nr": 1557,
+   "class": "missing_screw",
+   "session": 7
+  },
+  {
+   "file": "validation_1561.csv",
+   "sample_nr": 1561,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1587.csv",
+   "sample_nr": 1587,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1589.csv",
+   "sample_nr": 1589,
+   "class": "extra_component",
+   "session": 7
+  },
+  {
+   "file": "validation_1591.csv",
+   "sample_nr": 1591,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1597.csv",
+   "sample_nr": 1597,
+   "class": "extra_component",
+   "session": 7
+  },
+  {
+   "file": "validation_1601.csv",
+   "sample_nr": 1601,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1609.csv",
+   "sample_nr": 1609,
+   "class": "missing_screw",
+   "session": 7
+  },
+  {
+   "file": "validation_1615.csv",
+   "sample_nr": 1615,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1617.csv",
+   "sample_nr": 1617,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1629.csv",
+   "sample_nr": 1629,
+   "class": "extra_component",
+   "session": 7
+  },
+  {
+   "file": "validation_1631.csv",
+   "sample_nr": 1631,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1663.csv",
+   "sample_nr": 1663,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1665.csv",
+   "sample_nr": 1665,
+   "class": "extra_component",
+   "session": 7
+  },
+  {
+   "file": "validation_1669.csv",
+   "sample_nr": 1669,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1673.csv",
+   "sample_nr": 1673,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1679.csv",
+   "sample_nr": 1679,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1681.csv",
+   "sample_nr": 1681,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1699.csv",
+   "sample_nr": 1699,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1703.csv",
+   "sample_nr": 1703,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1715.csv",
+   "sample_nr": 1715,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1735.csv",
+   "sample_nr": 1735,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1739.csv",
+   "sample_nr": 1739,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1741.csv",
+   "sample_nr": 1741,
+   "class": "extra_component",
+   "session": 7
+  },
+  {
+   "file": "validation_1745.csv",
+   "sample_nr": 1745,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1751.csv",
+   "sample_nr": 1751,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1767.csv",
+   "sample_nr": 1767,
+   "class": "extra_component",
+   "session": 7
+  },
+  {
+   "file": "validation_1781.csv",
+   "sample_nr": 1781,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1789.csv",
+   "sample_nr": 1789,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1813.csv",
+   "sample_nr": 1813,
+   "class": "normal",
+   "session": 7
+  },
+  {
+   "file": "validation_1849.csv",
+   "sample_nr": 1849,
+   "class": "extra_component",
+   "session": 8
+  },
+  {
+   "file": "validation_1851.csv",
+   "sample_nr": 1851,
+   "class": "damaged_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_1853.csv",
+   "sample_nr": 1853,
+   "class": "damaged_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_1861.csv",
+   "sample_nr": 1861,
+   "class": "damaged_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_1867.csv",
+   "sample_nr": 1867,
+   "class": "extra_component",
+   "session": 8
+  },
+  {
+   "file": "validation_1879.csv",
+   "sample_nr": 1879,
+   "class": "damaged_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_1889.csv",
+   "sample_nr": 1889,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_1905.csv",
+   "sample_nr": 1905,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_1909.csv",
+   "sample_nr": 1909,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_1919.csv",
+   "sample_nr": 1919,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_1961.csv",
+   "sample_nr": 1961,
+   "class": "missing_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_1971.csv",
+   "sample_nr": 1971,
+   "class": "missing_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_1973.csv",
+   "sample_nr": 1973,
+   "class": "missing_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_1987.csv",
+   "sample_nr": 1987,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_2001.csv",
+   "sample_nr": 2001,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_2005.csv",
+   "sample_nr": 2005,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_2021.csv",
+   "sample_nr": 2021,
+   "class": "damaged_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_2025.csv",
+   "sample_nr": 2025,
+   "class": "damaged_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_2039.csv",
+   "sample_nr": 2039,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_2063.csv",
+   "sample_nr": 2063,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_2073.csv",
+   "sample_nr": 2073,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_2091.csv",
+   "sample_nr": 2091,
+   "class": "normal",
+   "session": 8
+  },
+  {
+   "file": "validation_2127.csv",
+   "sample_nr": 2127,
+   "class": "missing_screw",
+   "session": 8
+  },
+  {
+   "file": "validation_2151.csv",
+   "sample_nr": 2151,
+   "class": "extra_component",
+   "session": 8
+  }
+ ]
+}

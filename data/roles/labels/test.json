@@ -1,0 +1,593 @@
+{
+ "role": "test",
+ "operations": [
+  {
+   "file": "test_2158.csv",
+   "sample_nr": 2158,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2160.csv",
+   "sample_nr": 2160,
+   "class": "extra_component",
+   "session": 9
+  },
+  {
+   "file": "test_2172.csv",
+   "sample_nr": 2172,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2176.csv",
+   "sample_nr": 2176,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2178.csv",
+   "sample_nr": 2178,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2218.csv",
+   "sample_nr": 2218,
+   "class": "extra_component",
+   "session": 9
+  },
+  {
+   "file": "test_2224.csv",
+   "sample_nr": 2224,
+   "class": "extra_component",
+   "session": 9
+  },
+  {
+   "file": "test_2228.csv",
+   "sample_nr": 2228,
+   "class": "extra_component",
+   "session": 9
+  },
+  {
+   "file": "test_2252.csv",
+   "sample_nr": 2252,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2270.csv",
+   "sample_nr": 2270,
+   "class": "extra_component",
+   "session": 9
+  },
+  {
+   "file": "test_2274.csv",
+   "sample_nr": 2274,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2276.csv",
+   "sample_nr": 2276,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2290.csv",
+   "sample_nr": 2290,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2300.csv",
+   "sample_nr": 2300,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2304.csv",
+   "sample_nr": 2304,
+   "class": "extra_component",
+   "session": 9
+  },
+  {
+   "file": "test_2310.csv",
+   "sample_nr": 2310,
+   "class": "extra_component",
+   "session": 9
+  },
+  {
+   "file": "test_2312.csv",
+   "sample_nr": 2312,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2316.csv",
+   "sample_nr": 2316,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2322.csv",
+   "sample_nr": 2322,
+   "class": "extra_component",
+   "session": 9
+  },
+  {
+   "file": "test_2328.csv",
+   "sample_nr": 2328,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2330.csv",
+   "sample_nr": 2330,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2334.csv",
+   "sample_nr": 2334,
+   "class": "normal",
+   "session": 9
+  },
+  {
+   "file": "test_2338.csv",
+   "sample_nr": 2338,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2348.csv",
+   "sample_nr": 2348,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2356.csv",
+   "sample_nr": 2356,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2388.csv",
+   "sample_nr": 2388,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2430.csv",
+   "sample_nr": 2430,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2448.csv",
+   "sample_nr": 2448,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2454.csv",
+   "sample_nr": 2454,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2466.csv",
+   "sample_nr": 2466,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2470.csv",
+   "sample_nr": 2470,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2472.csv",
+   "sample_nr": 2472,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2494.csv",
+   "sample_nr": 2494,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2496.csv",
+   "sample_nr": 2496,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2506.csv",
+   "sample_nr": 2506,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2522.csv",
+   "sample_nr": 2522,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2524.csv",
+   "sample_nr": 2524,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2534.csv",
+   "sample_nr": 2534,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2550.csv",
+   "sample_nr": 2550,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2558.csv",
+   "sample_nr": 2558,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2568.csv",
+   "sample_nr": 2568,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2574.csv",
+   "sample_nr": 2574,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2576.csv",
+   "sample_nr": 2576,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2596.csv",
+   "sample_nr": 2596,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2600.csv",
+   "sample_nr": 2600,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2616.csv",
+   "sample_nr": 2616,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2618.csv",
+   "sample_nr": 2618,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2622.csv",
+   "sample_nr": 2622,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2630.csv",
+   "sample_nr": 2630,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2646.csv",
+   "sample_nr": 2646,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2658.csv",
+   "sample_nr": 2658,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2670.csv",
+   "sample_nr": 2670,
+   "class": "damaged_screw",
+   "session": 10
+  },
+  {
+   "file": "test_2674.csv",
+   "sample_nr": 2674,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2696.csv",
+   "sample_nr": 2696,
+   "class": "normal",
+   "session": 10
+  },
+  {
+   "file": "test_2706.csv",
+   "sample_nr": 2706,
+   "class": "missing_screw",
+   "session": 11
+  },
+  {
+   "file": "test_2712.csv",
+   "sample_nr": 2712,
+   "class": "normal",
+   "session": 11
+  },
+  {
+   "file": "test_2724.csv",
+   "sample_nr": 2724,
+   "class": "normal",
+   "session": 11
+  },
+  {
+   "file": "test_2788.csv",
+   "sample_nr": 2788,
+   "class": "normal",
+   "session": 11
+  },
+  {
+   "file": "test_2818.csv",
+   "sample_nr": 2818,
+   "class": "missing_screw",
+   "session": 11
+  },
+  {
+   "file": "test_2830.csv",
+   "sample_nr": 2830,
+   "class": "missing_screw",
+   "session": 11
+  },
+  {
+   "file": "test_2836.csv",
+   "sample_nr": 2836,
+   "class": "normal",
+   "session": 11
+  },
+  {
+   "file": "test_2858.csv",
+   "sample_nr": 2858,
+   "class": "missing_screw",
+   "session": 11
+  },
+  {
+   "file": "test_2862.csv",
+   "sample_nr": 2862,
+   "class": "missing_screw",
+   "session": 11
+  },
+  {
+   "file": "test_2864.csv",
+   "sample_nr": 2864,
+   "class": "normal",
+   "session": 11
+  },
+  {
+   "file": "test_2868.csv",
+   "sample_nr": 2868,
+   "class": "normal",
+   "session": 11
+  },
+  {
+   "file": "test_2888.csv",
+   "sample_nr": 2888,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_2892.csv",
+   "sample_nr": 2892,
+   "class": "missing_screw",
+   "session": 12
+  },
+  {
+   "file": "test_2922.csv",
+   "sample_nr": 2922,
+   "class": "missing_screw",
+   "session": 12
+  },
+  {
+   "file": "test_2948.csv",
+   "sample_nr": 2948,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_3006.csv",
+   "sample_nr": 3006,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_3036.csv",
+   "sample_nr": 3036,
+   "class": "missing_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3050.csv",
+   "sample_nr": 3050,
+   "class": "damaged_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3064.csv",
+   "sample_nr": 3064,
+   "class": "missing_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3086.csv",
+   "sample_nr": 3086,
+   "class": "missing_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3100.csv",
+   "sample_nr": 3100,
+   "class": "damaged_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3108.csv",
+   "sample_nr": 3108,
+   "class": "damaged_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3126.csv",
+   "sample_nr": 3126,
+   "class": "missing_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3132.csv",
+   "sample_nr": 3132,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_3140.csv",
+   "sample_nr": 3140,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_3162.csv",
+   "sample_nr": 3162,
+   "class": "missing_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3164.csv",
+   "sample_nr": 3164,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_3168.csv",
+   "sample_nr": 3168,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_3184.csv",
+   "sample_nr": 3184,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_3202.csv",
+   "sample_nr": 3202,
+   "class": "missing_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3216.csv",
+   "sample_nr": 3216,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_3228.csv",
+   "sample_nr": 3228,
+   "class": "normal",
+   "session": 12
+  },
+  {
+   "file": "test_3246.csv",
+   "sample_nr": 3246,
+   "class": "missing_screw",
+   "session": 12
+  },
+  {
+   "file": "test_3264.csv",
+   "sample_nr": 3264,
+   "class": "normal",
+   "session": 13
+  },
+  {
+   "file": "test_3268.csv",
+   "sample_nr": 3268,
+   "class": "normal",
+   "session": 13
+  },
+  {
+   "file": "test_3270.csv",
+   "sample_nr": 3270,
+   "class": "normal",
+   "session": 13
+  },
+  {
+   "file": "test_3274.csv",
+   "sample_nr": 3274,
+   "class": "normal",
+   "session": 13
+  },
+  {
+   "file": "test_3276.csv",
+   "sample_nr": 3276,
+   "class": "normal",
+   "session": 13
+  },
+  {
+   "file": "test_3290.csv",
+   "sample_nr": 3290,
+   "class": "missing_screw",
+   "session": 13
+  },
+  {
+   "file": "test_3314.csv",
+   "sample_nr": 3314,
+   "class": "normal",
+   "session": 13
+  },
+  {
+   "file": "test_3322.csv",
+   "sample_nr": 3322,
+   "class": "normal",
+   "session": 13
+  },
+  {
+   "file": "test_3338.csv",
+   "sample_nr": 3338,
+   "class": "normal",
+   "session": 13
+  },
+  {
+   "file": "test_3398.csv",
+   "sample_nr": 3398,
+   "class": "normal",
+   "session": 13
+  },
+  {
+   "file": "test_3422.csv",
+   "sample_nr": 3422,
+   "class": "normal",
+   "session": 13
+  }
+ ]
+}

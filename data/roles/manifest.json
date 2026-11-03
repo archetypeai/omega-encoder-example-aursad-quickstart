@@ -1,0 +1,3190 @@
+{
+ "dataset": "AURSAD v1.1 (Zenodo 10.5281/zenodo.4487073), CC BY 4.0, derived; see NOTICE.md",
+ "window": 1024,
+ "step_s": 0.01,
+ "channels": [
+  "torque_current",
+  "torque_achieved",
+  "joint_current_0",
+  "joint_current_1",
+  "joint_current_2",
+  "joint_current_3",
+  "joint_current_4",
+  "joint_current_5",
+  "tcp_force_z",
+  "tool_acc_x",
+  "tool_acc_y",
+  "tool_acc_z"
+ ],
+ "source_columns": {
+  "torque_current": "output_double_register_25",
+  "torque_achieved": "output_double_register_24",
+  "joint_current_0": "actual_current_0",
+  "joint_current_1": "actual_current_1",
+  "joint_current_2": "actual_current_2",
+  "joint_current_3": "actual_current_3",
+  "joint_current_4": "actual_current_4",
+  "joint_current_5": "actual_current_5",
+  "tcp_force_z": "actual_TCP_force_2",
+  "tool_acc_x": "actual_tool_accelerometer_0",
+  "tool_acc_y": "actual_tool_accelerometer_1",
+  "tool_acc_z": "actual_tool_accelerometer_2"
+ },
+ "role_sessions": {
+  "library": [
+   0,
+   4
+  ],
+  "validation": [
+   5,
+   8
+  ],
+  "test": [
+   9,
+   13
+  ],
+  "delivery": [
+   14,
+   18
+  ]
+ },
+ "classes": [
+  "normal",
+  "damaged_screw",
+  "extra_component",
+  "missing_screw"
+ ],
+ "zscore": {
+  "mean": {
+   "torque_current": 0.044226,
+   "torque_achieved": 0.106877,
+   "joint_current_0": -0.017477,
+   "joint_current_1": -0.303534,
+   "joint_current_2": -0.128589,
+   "joint_current_3": 0.023908,
+   "joint_current_4": 0.024478,
+   "joint_current_5": 0.038398,
+   "tcp_force_z": 11.243057,
+   "tool_acc_x": -9.589471,
+   "tool_acc_y": 0.075362,
+   "tool_acc_z": 0.122427
+  },
+  "std": {
+   "torque_current": 0.058592,
+   "torque_achieved": 0.242279,
+   "joint_current_0": 0.247067,
+   "joint_current_1": 1.531334,
+   "joint_current_2": 1.181175,
+   "joint_current_3": 0.639086,
+   "joint_current_4": 0.214228,
+   "joint_current_5": 0.165107,
+   "tcp_force_z": 12.679354,
+   "tool_acc_x": 0.246058,
+   "tool_acc_y": 0.257634,
+   "tool_acc_z": 0.260437
+  }
+ },
+ "files": [
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0002.csv",
+   "rows": 1024,
+   "start": 21200.36,
+   "end": 21210.59
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0004.csv",
+   "rows": 1024,
+   "start": 21234.35,
+   "end": 21244.58
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0012.csv",
+   "rows": 1024,
+   "start": 21344.94,
+   "end": 21355.17
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0016.csv",
+   "rows": 1024,
+   "start": 21402.53,
+   "end": 21412.76
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0022.csv",
+   "rows": 1024,
+   "start": 21482.82,
+   "end": 21493.05
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0024.csv",
+   "rows": 1024,
+   "start": 21513.08,
+   "end": 21523.31
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0046.csv",
+   "rows": 1024,
+   "start": 21859.42,
+   "end": 21869.65
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0048.csv",
+   "rows": 1024,
+   "start": 21891.72,
+   "end": 21901.95
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0058.csv",
+   "rows": 1024,
+   "start": 22043.51,
+   "end": 22053.74
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0060.csv",
+   "rows": 1024,
+   "start": 22080.87,
+   "end": 22091.1
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0062.csv",
+   "rows": 1024,
+   "start": 22114.12,
+   "end": 22124.35
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0072.csv",
+   "rows": 1024,
+   "start": 22288.81,
+   "end": 22299.04
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0074.csv",
+   "rows": 1024,
+   "start": 22315.99,
+   "end": 22326.22
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0078.csv",
+   "rows": 1024,
+   "start": 22389.73,
+   "end": 22399.96
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0080.csv",
+   "rows": 1024,
+   "start": 22423.95,
+   "end": 22434.18
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0090.csv",
+   "rows": 1024,
+   "start": 22596.76,
+   "end": 22606.99
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0092.csv",
+   "rows": 1024,
+   "start": 22630.18,
+   "end": 22640.41
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0096.csv",
+   "rows": 1024,
+   "start": 22703.47,
+   "end": 22713.7
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0110.csv",
+   "rows": 1024,
+   "start": 22947.06,
+   "end": 22957.29
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0112.csv",
+   "rows": 1024,
+   "start": 22980.94,
+   "end": 22991.17
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0114.csv",
+   "rows": 1024,
+   "start": 23015.2,
+   "end": 23025.43
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0116.csv",
+   "rows": 1024,
+   "start": 23049.21,
+   "end": 23059.44
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0120.csv",
+   "rows": 1024,
+   "start": 23115.55,
+   "end": 23125.78
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0122.csv",
+   "rows": 1024,
+   "start": 23148.96,
+   "end": 23159.19
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0128.csv",
+   "rows": 1024,
+   "start": 23242.1,
+   "end": 23252.33
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0153.csv",
+   "rows": 1024,
+   "start": 118805.46,
+   "end": 118815.69
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0157.csv",
+   "rows": 1024,
+   "start": 118862.41,
+   "end": 118872.64
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0163.csv",
+   "rows": 1024,
+   "start": 118953.76,
+   "end": 118963.99
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0165.csv",
+   "rows": 1024,
+   "start": 118982.34,
+   "end": 118992.57
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0167.csv",
+   "rows": 1024,
+   "start": 119009.35,
+   "end": 119019.58
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0169.csv",
+   "rows": 1024,
+   "start": 119036.96,
+   "end": 119047.19
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0177.csv",
+   "rows": 1024,
+   "start": 119144.21,
+   "end": 119154.44
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0183.csv",
+   "rows": 1024,
+   "start": 119240.51,
+   "end": 119250.74
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0185.csv",
+   "rows": 1024,
+   "start": 119274.7,
+   "end": 119284.93
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0203.csv",
+   "rows": 1024,
+   "start": 119573.8,
+   "end": 119584.03
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0213.csv",
+   "rows": 1024,
+   "start": 120174.6,
+   "end": 120184.83
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0219.csv",
+   "rows": 1024,
+   "start": 120253.9,
+   "end": 120264.13
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0227.csv",
+   "rows": 1024,
+   "start": 120380.06,
+   "end": 120390.29
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0229.csv",
+   "rows": 1024,
+   "start": 120414.67,
+   "end": 120424.9
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0231.csv",
+   "rows": 1024,
+   "start": 120448.93,
+   "end": 120459.16
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0235.csv",
+   "rows": 1024,
+   "start": 120518.02,
+   "end": 120528.25
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0237.csv",
+   "rows": 1024,
+   "start": 121042.73,
+   "end": 121052.96
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0245.csv",
+   "rows": 1024,
+   "start": 121171.02,
+   "end": 121181.25
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0247.csv",
+   "rows": 1024,
+   "start": 121203.06,
+   "end": 121213.29
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0253.csv",
+   "rows": 1024,
+   "start": 121284.56,
+   "end": 121294.79
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0257.csv",
+   "rows": 1024,
+   "start": 121354.11,
+   "end": 121364.34
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0261.csv",
+   "rows": 1024,
+   "start": 121413.26,
+   "end": 121423.49
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0265.csv",
+   "rows": 1024,
+   "start": 121487.33,
+   "end": 121497.56
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0271.csv",
+   "rows": 1024,
+   "start": 121583.12,
+   "end": 121593.35
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0275.csv",
+   "rows": 1024,
+   "start": 121654.81,
+   "end": 121665.04
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0287.csv",
+   "rows": 1024,
+   "start": 201796.65,
+   "end": 201806.88
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0289.csv",
+   "rows": 1024,
+   "start": 201824.59,
+   "end": 201834.82
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0293.csv",
+   "rows": 1024,
+   "start": 201876.77,
+   "end": 201887.0
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0317.csv",
+   "rows": 1024,
+   "start": 202282.75,
+   "end": 202292.98
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0321.csv",
+   "rows": 1024,
+   "start": 202349.4,
+   "end": 202359.63
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0323.csv",
+   "rows": 1024,
+   "start": 202382.9,
+   "end": 202393.13
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0333.csv",
+   "rows": 1024,
+   "start": 202539.55,
+   "end": 202549.78
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0335.csv",
+   "rows": 1024,
+   "start": 202571.52,
+   "end": 202581.75
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0345.csv",
+   "rows": 1024,
+   "start": 202714.95,
+   "end": 202725.18
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0347.csv",
+   "rows": 1024,
+   "start": 202743.06,
+   "end": 202753.29
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0349.csv",
+   "rows": 1024,
+   "start": 202769.99,
+   "end": 202780.22
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0351.csv",
+   "rows": 1024,
+   "start": 202798.48,
+   "end": 202808.71
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0353.csv",
+   "rows": 1024,
+   "start": 202820.49,
+   "end": 202830.72
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0355.csv",
+   "rows": 1024,
+   "start": 202848.83,
+   "end": 202859.06
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0359.csv",
+   "rows": 1024,
+   "start": 202916.15,
+   "end": 202926.38
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0365.csv",
+   "rows": 1024,
+   "start": 203021.58,
+   "end": 203031.81
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0379.csv",
+   "rows": 1024,
+   "start": 203242.49,
+   "end": 203252.72
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0391.csv",
+   "rows": 1024,
+   "start": 204013.55,
+   "end": 204023.78
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0395.csv",
+   "rows": 1024,
+   "start": 204074.27,
+   "end": 204084.5
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0397.csv",
+   "rows": 1024,
+   "start": 204102.14,
+   "end": 204112.37
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0409.csv",
+   "rows": 1024,
+   "start": 204569.86,
+   "end": 204580.09
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0411.csv",
+   "rows": 1024,
+   "start": 204604.74,
+   "end": 204614.97
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0415.csv",
+   "rows": 1024,
+   "start": 205035.44,
+   "end": 205045.67
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0431.csv",
+   "rows": 1024,
+   "start": 205882.76,
+   "end": 205892.99
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0437.csv",
+   "rows": 1024,
+   "start": 205981.05,
+   "end": 205991.28
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0451.csv",
+   "rows": 1024,
+   "start": 206212.14,
+   "end": 206222.37
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0453.csv",
+   "rows": 1024,
+   "start": 206244.36,
+   "end": 206254.59
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0517.csv",
+   "rows": 1024,
+   "start": 306418.22,
+   "end": 306428.45
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0519.csv",
+   "rows": 1024,
+   "start": 306446.86,
+   "end": 306457.09
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0525.csv",
+   "rows": 1024,
+   "start": 306531.84,
+   "end": 306542.07
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0527.csv",
+   "rows": 1024,
+   "start": 306559.91,
+   "end": 306570.14
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0531.csv",
+   "rows": 1024,
+   "start": 306609.5,
+   "end": 306619.73
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0533.csv",
+   "rows": 1024,
+   "start": 306642.54,
+   "end": 306652.77
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0535.csv",
+   "rows": 1024,
+   "start": 306669.08,
+   "end": 306679.31
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0537.csv",
+   "rows": 1024,
+   "start": 306705.14,
+   "end": 306715.37
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0541.csv",
+   "rows": 1024,
+   "start": 306771.42,
+   "end": 306781.65
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0543.csv",
+   "rows": 1024,
+   "start": 306805.56,
+   "end": 306815.79
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0545.csv",
+   "rows": 1024,
+   "start": 306840.59,
+   "end": 306850.82
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0549.csv",
+   "rows": 1024,
+   "start": 306900.38,
+   "end": 306910.61
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0553.csv",
+   "rows": 1024,
+   "start": 306967.24,
+   "end": 306977.47
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0557.csv",
+   "rows": 1024,
+   "start": 307034.32,
+   "end": 307044.55
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0561.csv",
+   "rows": 1024,
+   "start": 307100.97,
+   "end": 307111.2
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0567.csv",
+   "rows": 1024,
+   "start": 307188.84,
+   "end": 307199.07
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0575.csv",
+   "rows": 1024,
+   "start": 307298.84,
+   "end": 307309.07
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0579.csv",
+   "rows": 1024,
+   "start": 307358.86,
+   "end": 307369.09
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0581.csv",
+   "rows": 1024,
+   "start": 307391.6,
+   "end": 307401.83
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0605.csv",
+   "rows": 1024,
+   "start": 307753.14,
+   "end": 307763.37
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0607.csv",
+   "rows": 1024,
+   "start": 307780.16,
+   "end": 307790.39
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0609.csv",
+   "rows": 1024,
+   "start": 308671.5,
+   "end": 308681.73
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0611.csv",
+   "rows": 1024,
+   "start": 308698.3,
+   "end": 308708.53
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0617.csv",
+   "rows": 1024,
+   "start": 308799.17,
+   "end": 308809.4
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0621.csv",
+   "rows": 1024,
+   "start": 308853.05,
+   "end": 308863.28
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0627.csv",
+   "rows": 1024,
+   "start": 308948.91,
+   "end": 308959.14
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0631.csv",
+   "rows": 1024,
+   "start": 309015.64,
+   "end": 309025.87
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0633.csv",
+   "rows": 1024,
+   "start": 309049.1,
+   "end": 309059.33
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0635.csv",
+   "rows": 1024,
+   "start": 309081.22,
+   "end": 309091.45
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0641.csv",
+   "rows": 1024,
+   "start": 313498.92,
+   "end": 313509.15
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0643.csv",
+   "rows": 1024,
+   "start": 313522.33,
+   "end": 313532.56
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0649.csv",
+   "rows": 1024,
+   "start": 313609.64,
+   "end": 313619.87
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0651.csv",
+   "rows": 1024,
+   "start": 313638.2,
+   "end": 313648.43
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0659.csv",
+   "rows": 1024,
+   "start": 313756.5,
+   "end": 313766.73
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0667.csv",
+   "rows": 1024,
+   "start": 313866.1,
+   "end": 313876.33
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0673.csv",
+   "rows": 1024,
+   "start": 313975.7,
+   "end": 313985.93
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0675.csv",
+   "rows": 1024,
+   "start": 314010.63,
+   "end": 314020.86
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0677.csv",
+   "rows": 1024,
+   "start": 314044.53,
+   "end": 314054.76
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0689.csv",
+   "rows": 1024,
+   "start": 314808.41,
+   "end": 314818.64
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0703.csv",
+   "rows": 1024,
+   "start": 315322.13,
+   "end": 315332.36
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0715.csv",
+   "rows": 1024,
+   "start": 315488.59,
+   "end": 315498.82
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0719.csv",
+   "rows": 1024,
+   "start": 315552.56,
+   "end": 315562.79
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0735.csv",
+   "rows": 1024,
+   "start": 315802.47,
+   "end": 315812.7
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0739.csv",
+   "rows": 1024,
+   "start": 315867.64,
+   "end": 315877.87
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0741.csv",
+   "rows": 1024,
+   "start": 315901.61,
+   "end": 315911.84
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0745.csv",
+   "rows": 1024,
+   "start": 315954.83,
+   "end": 315965.06
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0761.csv",
+   "rows": 1024,
+   "start": 316315.72,
+   "end": 316325.95
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0763.csv",
+   "rows": 1024,
+   "start": 316347.8,
+   "end": 316358.03
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0785.csv",
+   "rows": 1024,
+   "start": 317043.77,
+   "end": 317054.0
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0791.csv",
+   "rows": 1024,
+   "start": 317140.94,
+   "end": 317151.17
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0795.csv",
+   "rows": 1024,
+   "start": 317204.74,
+   "end": 317214.97
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0799.csv",
+   "rows": 1024,
+   "start": 317257.45,
+   "end": 317267.68
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0809.csv",
+   "rows": 1024,
+   "start": 317429.78,
+   "end": 317440.01
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0811.csv",
+   "rows": 1024,
+   "start": 317457.71,
+   "end": 317467.94
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0815.csv",
+   "rows": 1024,
+   "start": 400791.41,
+   "end": 400801.64
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0827.csv",
+   "rows": 1024,
+   "start": 401763.97,
+   "end": 401774.2
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0833.csv",
+   "rows": 1024,
+   "start": 401853.69,
+   "end": 401863.92
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0837.csv",
+   "rows": 1024,
+   "start": 401912.85,
+   "end": 401923.08
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0839.csv",
+   "rows": 1024,
+   "start": 401946.21,
+   "end": 401956.44
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0841.csv",
+   "rows": 1024,
+   "start": 401978.58,
+   "end": 401988.81
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0855.csv",
+   "rows": 1024,
+   "start": 402215.41,
+   "end": 402225.64
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0861.csv",
+   "rows": 1024,
+   "start": 402315.83,
+   "end": 402326.06
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0873.csv",
+   "rows": 1024,
+   "start": 402506.06,
+   "end": 402516.29
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0875.csv",
+   "rows": 1024,
+   "start": 402539.55,
+   "end": 402549.78
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0877.csv",
+   "rows": 1024,
+   "start": 402571.52,
+   "end": 402581.75
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0879.csv",
+   "rows": 1024,
+   "start": 402604.69,
+   "end": 402614.92
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0881.csv",
+   "rows": 1024,
+   "start": 402634.98,
+   "end": 402645.21
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0887.csv",
+   "rows": 1024,
+   "start": 402714.95,
+   "end": 402725.18
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0889.csv",
+   "rows": 1024,
+   "start": 402743.06,
+   "end": 402753.29
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0901.csv",
+   "rows": 1024,
+   "start": 402916.15,
+   "end": 402926.38
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0903.csv",
+   "rows": 1024,
+   "start": 402951.03,
+   "end": 402961.26
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0929.csv",
+   "rows": 1024,
+   "start": 403365.01,
+   "end": 403375.24
+  },
+  {
+   "role": "library",
+   "path": "data/roles/library/library_0931.csv",
+   "rows": 1024,
+   "start": 403397.67,
+   "end": 403407.9
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_0947.csv",
+   "rows": 1024,
+   "start": 501113.85,
+   "end": 501124.08
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_0955.csv",
+   "rows": 1024,
+   "start": 501230.53,
+   "end": 501240.76
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_0969.csv",
+   "rows": 1024,
+   "start": 501447.49,
+   "end": 501457.72
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_0983.csv",
+   "rows": 1024,
+   "start": 501658.2,
+   "end": 501668.43
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_0995.csv",
+   "rows": 1024,
+   "start": 501838.62,
+   "end": 501848.85
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_0997.csv",
+   "rows": 1024,
+   "start": 501863.86,
+   "end": 501874.09
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1007.csv",
+   "rows": 1024,
+   "start": 502000.66,
+   "end": 502010.89
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1027.csv",
+   "rows": 1024,
+   "start": 502310.26,
+   "end": 502320.49
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1043.csv",
+   "rows": 1024,
+   "start": 503175.02,
+   "end": 503185.25
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1067.csv",
+   "rows": 1024,
+   "start": 503532.16,
+   "end": 503542.39
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1071.csv",
+   "rows": 1024,
+   "start": 503583.16,
+   "end": 503593.39
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1073.csv",
+   "rows": 1024,
+   "start": 503616.88,
+   "end": 503627.11
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1083.csv",
+   "rows": 1024,
+   "start": 504051.37,
+   "end": 504061.6
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1099.csv",
+   "rows": 1024,
+   "start": 504293.82,
+   "end": 504304.05
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1101.csv",
+   "rows": 1024,
+   "start": 504317.58,
+   "end": 504327.81
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1113.csv",
+   "rows": 1024,
+   "start": 504506.84,
+   "end": 504517.07
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1117.csv",
+   "rows": 1024,
+   "start": 506782.06,
+   "end": 506792.29
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1165.csv",
+   "rows": 1024,
+   "start": 507942.99,
+   "end": 507953.22
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1183.csv",
+   "rows": 1024,
+   "start": 508205.1,
+   "end": 508215.33
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1199.csv",
+   "rows": 1024,
+   "start": 508454.15,
+   "end": 508464.38
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1215.csv",
+   "rows": 1024,
+   "start": 509252.86,
+   "end": 509263.09
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1227.csv",
+   "rows": 1024,
+   "start": 509443.1,
+   "end": 509453.33
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1239.csv",
+   "rows": 1024,
+   "start": 509622.16,
+   "end": 509632.39
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1241.csv",
+   "rows": 1024,
+   "start": 509649.5,
+   "end": 509659.73
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1253.csv",
+   "rows": 1024,
+   "start": 509890.4,
+   "end": 509900.63
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1261.csv",
+   "rows": 1024,
+   "start": 510031.38,
+   "end": 510041.61
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1275.csv",
+   "rows": 1024,
+   "start": 510259.8,
+   "end": 510270.03
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1281.csv",
+   "rows": 1024,
+   "start": 510360.36,
+   "end": 510370.59
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1285.csv",
+   "rows": 1024,
+   "start": 510415.16,
+   "end": 510425.39
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1289.csv",
+   "rows": 1024,
+   "start": 510484.6,
+   "end": 510494.83
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1294.csv",
+   "rows": 1024,
+   "start": 606782.06,
+   "end": 606792.29
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1300.csv",
+   "rows": 1024,
+   "start": 606862.19,
+   "end": 606872.42
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1322.csv",
+   "rows": 1024,
+   "start": 607585.37,
+   "end": 607595.6
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1338.csv",
+   "rows": 1024,
+   "start": 607841.28,
+   "end": 607851.51
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1342.csv",
+   "rows": 1024,
+   "start": 607900.26,
+   "end": 607910.49
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1344.csv",
+   "rows": 1024,
+   "start": 607942.99,
+   "end": 607953.22
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1348.csv",
+   "rows": 1024,
+   "start": 608007.78,
+   "end": 608018.01
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1350.csv",
+   "rows": 1024,
+   "start": 608039.85,
+   "end": 608050.08
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1360.csv",
+   "rows": 1024,
+   "start": 608182.59,
+   "end": 608192.82
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1388.csv",
+   "rows": 1024,
+   "start": 608629.37,
+   "end": 608639.6
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1414.csv",
+   "rows": 1024,
+   "start": 609558.84,
+   "end": 609569.07
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1426.csv",
+   "rows": 1024,
+   "start": 609795.0,
+   "end": 609805.23
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1428.csv",
+   "rows": 1024,
+   "start": 609830.66,
+   "end": 609840.89
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1436.csv",
+   "rows": 1024,
+   "start": 609969.88,
+   "end": 609980.11
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1444.csv",
+   "rows": 1024,
+   "start": 610103.14,
+   "end": 610113.37
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1479.csv",
+   "rows": 1024,
+   "start": 701028.77,
+   "end": 701039.0
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1493.csv",
+   "rows": 1024,
+   "start": 701230.53,
+   "end": 701240.76
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1497.csv",
+   "rows": 1024,
+   "start": 701287.08,
+   "end": 701297.31
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1525.csv",
+   "rows": 1024,
+   "start": 701717.66,
+   "end": 701727.89
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1535.csv",
+   "rows": 1024,
+   "start": 701863.86,
+   "end": 701874.09
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1549.csv",
+   "rows": 1024,
+   "start": 702064.56,
+   "end": 702074.79
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1557.csv",
+   "rows": 1024,
+   "start": 702184.84,
+   "end": 702195.07
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1561.csv",
+   "rows": 1024,
+   "start": 702242.11,
+   "end": 702252.34
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1587.csv",
+   "rows": 1024,
+   "start": 703259.48,
+   "end": 703269.71
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1589.csv",
+   "rows": 1024,
+   "start": 703283.66,
+   "end": 703293.89
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1591.csv",
+   "rows": 1024,
+   "start": 703315.34,
+   "end": 703325.57
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1597.csv",
+   "rows": 1024,
+   "start": 703402.36,
+   "end": 703412.59
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1601.csv",
+   "rows": 1024,
+   "start": 703472.08,
+   "end": 703482.31
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1609.csv",
+   "rows": 1024,
+   "start": 703583.16,
+   "end": 703593.39
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1615.csv",
+   "rows": 1024,
+   "start": 703986.51,
+   "end": 703996.74
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1617.csv",
+   "rows": 1024,
+   "start": 704019.38,
+   "end": 704029.61
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1629.csv",
+   "rows": 1024,
+   "start": 704194.75,
+   "end": 704204.98
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1631.csv",
+   "rows": 1024,
+   "start": 704228.99,
+   "end": 704239.22
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1663.csv",
+   "rows": 1024,
+   "start": 713638.2,
+   "end": 713648.43
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1665.csv",
+   "rows": 1024,
+   "start": 713661.86,
+   "end": 713672.09
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1669.csv",
+   "rows": 1024,
+   "start": 713725.39,
+   "end": 713735.62
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1673.csv",
+   "rows": 1024,
+   "start": 713787.96,
+   "end": 713798.19
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1679.csv",
+   "rows": 1024,
+   "start": 713866.1,
+   "end": 713876.33
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1681.csv",
+   "rows": 1024,
+   "start": 713907.3,
+   "end": 713917.53
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1699.csv",
+   "rows": 1024,
+   "start": 714774.6,
+   "end": 714784.83
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1703.csv",
+   "rows": 1024,
+   "start": 714841.77,
+   "end": 714852.0
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1715.csv",
+   "rows": 1024,
+   "start": 715322.13,
+   "end": 715332.36
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1735.csv",
+   "rows": 1024,
+   "start": 715618.93,
+   "end": 715629.16
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1739.csv",
+   "rows": 1024,
+   "start": 715680.36,
+   "end": 715690.59
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1741.csv",
+   "rows": 1024,
+   "start": 715705.95,
+   "end": 715716.18
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1745.csv",
+   "rows": 1024,
+   "start": 715774.22,
+   "end": 715784.45
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1751.csv",
+   "rows": 1024,
+   "start": 715867.64,
+   "end": 715877.87
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1767.csv",
+   "rows": 1024,
+   "start": 716224.36,
+   "end": 716234.59
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1781.csv",
+   "rows": 1024,
+   "start": 716440.62,
+   "end": 716450.85
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1789.csv",
+   "rows": 1024,
+   "start": 716584.12,
+   "end": 716594.35
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1813.csv",
+   "rows": 1024,
+   "start": 717284.0,
+   "end": 717294.23
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1849.csv",
+   "rows": 1024,
+   "start": 804653.25,
+   "end": 804663.48
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1851.csv",
+   "rows": 1024,
+   "start": 804684.45,
+   "end": 804694.68
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1853.csv",
+   "rows": 1024,
+   "start": 804714.45,
+   "end": 804724.68
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1861.csv",
+   "rows": 1024,
+   "start": 804846.74,
+   "end": 804856.97
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1867.csv",
+   "rows": 1024,
+   "start": 806040.5,
+   "end": 806050.73
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1879.csv",
+   "rows": 1024,
+   "start": 806240.66,
+   "end": 806250.89
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1889.csv",
+   "rows": 1024,
+   "start": 806390.5,
+   "end": 806400.73
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1905.csv",
+   "rows": 1024,
+   "start": 806609.5,
+   "end": 806619.73
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1909.csv",
+   "rows": 1024,
+   "start": 806669.08,
+   "end": 806679.31
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1919.csv",
+   "rows": 1024,
+   "start": 806840.58,
+   "end": 806850.81
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1961.csv",
+   "rows": 1024,
+   "start": 807477.54,
+   "end": 807487.77
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1971.csv",
+   "rows": 1024,
+   "start": 807631.14,
+   "end": 807641.37
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1973.csv",
+   "rows": 1024,
+   "start": 807663.4,
+   "end": 807673.63
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_1987.csv",
+   "rows": 1024,
+   "start": 808730.48,
+   "end": 808740.71
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2001.csv",
+   "rows": 1024,
+   "start": 808948.91,
+   "end": 808959.14
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2005.csv",
+   "rows": 1024,
+   "start": 809015.64,
+   "end": 809025.87
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2021.csv",
+   "rows": 1024,
+   "start": 816428.66,
+   "end": 816438.89
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2025.csv",
+   "rows": 1024,
+   "start": 818707.65,
+   "end": 818717.88
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2039.csv",
+   "rows": 1024,
+   "start": 818925.21,
+   "end": 818935.44
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2063.csv",
+   "rows": 1024,
+   "start": 819274.7,
+   "end": 819284.93
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2073.csv",
+   "rows": 1024,
+   "start": 819439.33,
+   "end": 819449.56
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2091.csv",
+   "rows": 1024,
+   "start": 820174.6,
+   "end": 820184.83
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2127.csv",
+   "rows": 1024,
+   "start": 821230.85,
+   "end": 821241.08
+  },
+  {
+   "role": "validation",
+   "path": "data/roles/validation/validation_2151.csv",
+   "rows": 1024,
+   "start": 821622.54,
+   "end": 821632.77
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2158.csv",
+   "rows": 1024,
+   "start": 912556.84,
+   "end": 912567.07
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2160.csv",
+   "rows": 1024,
+   "start": 912582.72,
+   "end": 912592.95
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2172.csv",
+   "rows": 1024,
+   "start": 912753.45,
+   "end": 912763.68
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2176.csv",
+   "rows": 1024,
+   "start": 912816.15,
+   "end": 912826.38
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2178.csv",
+   "rows": 1024,
+   "start": 912846.84,
+   "end": 912857.07
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2218.csv",
+   "rows": 1024,
+   "start": 913499.06,
+   "end": 913509.29
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2224.csv",
+   "rows": 1024,
+   "start": 913579.82,
+   "end": 913590.05
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2228.csv",
+   "rows": 1024,
+   "start": 913858.62,
+   "end": 913868.85
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2252.csv",
+   "rows": 1024,
+   "start": 914250.93,
+   "end": 914261.16
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2270.csv",
+   "rows": 1024,
+   "start": 914536.68,
+   "end": 914546.91
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2274.csv",
+   "rows": 1024,
+   "start": 914592.25,
+   "end": 914602.48
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2276.csv",
+   "rows": 1024,
+   "start": 914620.33,
+   "end": 914630.56
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2290.csv",
+   "rows": 1024,
+   "start": 914852.68,
+   "end": 914862.91
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2300.csv",
+   "rows": 1024,
+   "start": 915022.48,
+   "end": 915032.71
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2304.csv",
+   "rows": 1024,
+   "start": 915080.24,
+   "end": 915090.47
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2310.csv",
+   "rows": 1024,
+   "start": 915162.4,
+   "end": 915172.63
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2312.csv",
+   "rows": 1024,
+   "start": 915193.9,
+   "end": 915204.13
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2316.csv",
+   "rows": 1024,
+   "start": 915261.36,
+   "end": 915271.59
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2322.csv",
+   "rows": 1024,
+   "start": 915356.82,
+   "end": 915367.05
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2328.csv",
+   "rows": 1024,
+   "start": 915456.53,
+   "end": 915466.76
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2330.csv",
+   "rows": 1024,
+   "start": 915490.69,
+   "end": 915500.92
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2334.csv",
+   "rows": 1024,
+   "start": 915553.28,
+   "end": 915563.51
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2338.csv",
+   "rows": 1024,
+   "start": 1006137.36,
+   "end": 1006147.59
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2348.csv",
+   "rows": 1024,
+   "start": 1006280.37,
+   "end": 1006290.6
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2356.csv",
+   "rows": 1024,
+   "start": 1006402.5,
+   "end": 1006412.73
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2388.csv",
+   "rows": 1024,
+   "start": 1007471.62,
+   "end": 1007481.85
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2430.csv",
+   "rows": 1024,
+   "start": 1008453.02,
+   "end": 1008463.25
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2448.csv",
+   "rows": 1024,
+   "start": 1008759.41,
+   "end": 1008769.64
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2454.csv",
+   "rows": 1024,
+   "start": 1009307.51,
+   "end": 1009317.74
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2466.csv",
+   "rows": 1024,
+   "start": 1009483.02,
+   "end": 1009493.25
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2470.csv",
+   "rows": 1024,
+   "start": 1009547.76,
+   "end": 1009557.99
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2472.csv",
+   "rows": 1024,
+   "start": 1009574.42,
+   "end": 1009584.65
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2494.csv",
+   "rows": 1024,
+   "start": 1009958.29,
+   "end": 1009968.52
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2496.csv",
+   "rows": 1024,
+   "start": 1009990.33,
+   "end": 1010000.56
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2506.csv",
+   "rows": 1024,
+   "start": 1010151.16,
+   "end": 1010161.39
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2522.csv",
+   "rows": 1024,
+   "start": 1010419.07,
+   "end": 1010429.3
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2524.csv",
+   "rows": 1024,
+   "start": 1010452.57,
+   "end": 1010462.8
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2534.csv",
+   "rows": 1024,
+   "start": 1023736.74,
+   "end": 1023746.97
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2550.csv",
+   "rows": 1024,
+   "start": 1023982.79,
+   "end": 1023993.02
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2558.csv",
+   "rows": 1024,
+   "start": 1024119.26,
+   "end": 1024129.49
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2568.csv",
+   "rows": 1024,
+   "start": 1024289.43,
+   "end": 1024299.66
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2574.csv",
+   "rows": 1024,
+   "start": 1024390.42,
+   "end": 1024400.65
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2576.csv",
+   "rows": 1024,
+   "start": 1024417.6,
+   "end": 1024427.83
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2596.csv",
+   "rows": 1024,
+   "start": 1026742.48,
+   "end": 1026752.71
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2600.csv",
+   "rows": 1024,
+   "start": 1026798.41,
+   "end": 1026808.64
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2616.csv",
+   "rows": 1024,
+   "start": 1027061.75,
+   "end": 1027071.98
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2618.csv",
+   "rows": 1024,
+   "start": 1027096.79,
+   "end": 1027107.02
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2622.csv",
+   "rows": 1024,
+   "start": 1027165.81,
+   "end": 1027176.04
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2630.csv",
+   "rows": 1024,
+   "start": 1027301.65,
+   "end": 1027311.88
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2646.csv",
+   "rows": 1024,
+   "start": 1027541.49,
+   "end": 1027551.72
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2658.csv",
+   "rows": 1024,
+   "start": 1027739.18,
+   "end": 1027749.41
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2670.csv",
+   "rows": 1024,
+   "start": 1027942.26,
+   "end": 1027952.49
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2674.csv",
+   "rows": 1024,
+   "start": 1028008.75,
+   "end": 1028018.98
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2696.csv",
+   "rows": 1024,
+   "start": 1028369.7,
+   "end": 1028379.93
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2706.csv",
+   "rows": 1024,
+   "start": 1108215.16,
+   "end": 1108225.39
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2712.csv",
+   "rows": 1024,
+   "start": 1108284.0,
+   "end": 1108294.23
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2724.csv",
+   "rows": 1024,
+   "start": 1108427.54,
+   "end": 1108437.77
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2788.csv",
+   "rows": 1024,
+   "start": 1109284.24,
+   "end": 1109294.47
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2818.csv",
+   "rows": 1024,
+   "start": 1109712.9,
+   "end": 1109723.13
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2830.csv",
+   "rows": 1024,
+   "start": 1109853.97,
+   "end": 1109864.2
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2836.csv",
+   "rows": 1024,
+   "start": 1109940.69,
+   "end": 1109950.92
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2858.csv",
+   "rows": 1024,
+   "start": 1110250.6,
+   "end": 1110260.83
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2862.csv",
+   "rows": 1024,
+   "start": 1110305.59,
+   "end": 1110315.82
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2864.csv",
+   "rows": 1024,
+   "start": 1110334.29,
+   "end": 1110344.52
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2868.csv",
+   "rows": 1024,
+   "start": 1110389.34,
+   "end": 1110399.57
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2888.csv",
+   "rows": 1024,
+   "start": 1206131.35,
+   "end": 1206141.58
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2892.csv",
+   "rows": 1024,
+   "start": 1206169.61,
+   "end": 1206179.84
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2922.csv",
+   "rows": 1024,
+   "start": 1206548.01,
+   "end": 1206558.24
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_2948.csv",
+   "rows": 1024,
+   "start": 1206923.26,
+   "end": 1206933.49
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3006.csv",
+   "rows": 1024,
+   "start": 1207678.52,
+   "end": 1207688.75
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3036.csv",
+   "rows": 1024,
+   "start": 1208103.89,
+   "end": 1208114.12
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3050.csv",
+   "rows": 1024,
+   "start": 1208309.99,
+   "end": 1208320.22
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3064.csv",
+   "rows": 1024,
+   "start": 1208497.18,
+   "end": 1208507.41
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3086.csv",
+   "rows": 1024,
+   "start": 1212951.89,
+   "end": 1212962.12
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3100.csv",
+   "rows": 1024,
+   "start": 1213495.63,
+   "end": 1213505.86
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3108.csv",
+   "rows": 1024,
+   "start": 1213608.57,
+   "end": 1213618.8
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3126.csv",
+   "rows": 1024,
+   "start": 1213861.83,
+   "end": 1213872.06
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3132.csv",
+   "rows": 1024,
+   "start": 1213940.57,
+   "end": 1213950.8
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3140.csv",
+   "rows": 1024,
+   "start": 1214030.08,
+   "end": 1214040.31
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3162.csv",
+   "rows": 1024,
+   "start": 1214640.38,
+   "end": 1214650.61
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3164.csv",
+   "rows": 1024,
+   "start": 1214670.64,
+   "end": 1214680.87
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3168.csv",
+   "rows": 1024,
+   "start": 1214727.77,
+   "end": 1214738.0
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3184.csv",
+   "rows": 1024,
+   "start": 1214934.51,
+   "end": 1214944.74
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3202.csv",
+   "rows": 1024,
+   "start": 1215170.98,
+   "end": 1215181.21
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3216.csv",
+   "rows": 1024,
+   "start": 1215375.84,
+   "end": 1215386.07
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3228.csv",
+   "rows": 1024,
+   "start": 1215537.96,
+   "end": 1215548.19
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3246.csv",
+   "rows": 1024,
+   "start": 1215792.78,
+   "end": 1215803.01
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3264.csv",
+   "rows": 1024,
+   "start": 1309887.54,
+   "end": 1309897.77
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3268.csv",
+   "rows": 1024,
+   "start": 1309947.68,
+   "end": 1309957.91
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3270.csv",
+   "rows": 1024,
+   "start": 1309981.09,
+   "end": 1309991.32
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3274.csv",
+   "rows": 1024,
+   "start": 1310033.86,
+   "end": 1310044.09
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3276.csv",
+   "rows": 1024,
+   "start": 1310066.75,
+   "end": 1310076.98
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3290.csv",
+   "rows": 1024,
+   "start": 1310405.0,
+   "end": 1310415.23
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3314.csv",
+   "rows": 1024,
+   "start": 1310761.16,
+   "end": 1310771.39
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3322.csv",
+   "rows": 1024,
+   "start": 1310868.88,
+   "end": 1310879.11
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3338.csv",
+   "rows": 1024,
+   "start": 1311118.04,
+   "end": 1311128.27
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3398.csv",
+   "rows": 1024,
+   "start": 1312127.61,
+   "end": 1312137.84
+  },
+  {
+   "role": "test",
+   "path": "data/roles/test/test_3422.csv",
+   "rows": 1024,
+   "start": 1312491.8,
+   "end": 1312502.03
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3444.csv",
+   "rows": 1024,
+   "start": 1400881.71,
+   "end": 1400891.94
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3452.csv",
+   "rows": 1024,
+   "start": 1400994.54,
+   "end": 1401004.77
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3472.csv",
+   "rows": 1024,
+   "start": 1401346.63,
+   "end": 1401356.86
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3478.csv",
+   "rows": 1024,
+   "start": 1401439.22,
+   "end": 1401449.45
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3484.csv",
+   "rows": 1024,
+   "start": 1401524.16,
+   "end": 1401534.39
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3490.csv",
+   "rows": 1024,
+   "start": 1401612.52,
+   "end": 1401622.75
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3498.csv",
+   "rows": 1024,
+   "start": 1401717.63,
+   "end": 1401727.86
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3504.csv",
+   "rows": 1024,
+   "start": 1401796.43,
+   "end": 1401806.66
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3506.csv",
+   "rows": 1024,
+   "start": 1401818.5,
+   "end": 1401828.73
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3514.csv",
+   "rows": 1024,
+   "start": 1401940.16,
+   "end": 1401950.39
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3516.csv",
+   "rows": 1024,
+   "start": 1401971.16,
+   "end": 1401981.39
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3522.csv",
+   "rows": 1024,
+   "start": 1402067.85,
+   "end": 1402078.08
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3532.csv",
+   "rows": 1024,
+   "start": 1402223.57,
+   "end": 1402233.8
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3538.csv",
+   "rows": 1024,
+   "start": 1402313.77,
+   "end": 1402324.0
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3542.csv",
+   "rows": 1024,
+   "start": 1402374.35,
+   "end": 1402384.58
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3552.csv",
+   "rows": 1024,
+   "start": 1402506.07,
+   "end": 1402516.3
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3554.csv",
+   "rows": 1024,
+   "start": 1402529.52,
+   "end": 1402539.75
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3558.csv",
+   "rows": 1024,
+   "start": 1402591.56,
+   "end": 1402601.79
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3560.csv",
+   "rows": 1024,
+   "start": 1402626.0,
+   "end": 1402636.23
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3562.csv",
+   "rows": 1024,
+   "start": 1402653.46,
+   "end": 1402663.69
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3572.csv",
+   "rows": 1024,
+   "start": 1402799.71,
+   "end": 1402809.94
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3578.csv",
+   "rows": 1024,
+   "start": 1403163.95,
+   "end": 1403174.18
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3586.csv",
+   "rows": 1024,
+   "start": 1403280.99,
+   "end": 1403291.22
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3590.csv",
+   "rows": 1024,
+   "start": 1403340.46,
+   "end": 1403350.69
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3594.csv",
+   "rows": 1024,
+   "start": 1403401.58,
+   "end": 1403411.81
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3598.csv",
+   "rows": 1024,
+   "start": 1403466.51,
+   "end": 1403476.74
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3600.csv",
+   "rows": 1024,
+   "start": 1403501.49,
+   "end": 1403511.72
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3604.csv",
+   "rows": 1024,
+   "start": 1403558.28,
+   "end": 1403568.51
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3606.csv",
+   "rows": 1024,
+   "start": 1403589.1,
+   "end": 1403599.33
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3610.csv",
+   "rows": 1024,
+   "start": 1403646.88,
+   "end": 1403657.11
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3630.csv",
+   "rows": 1024,
+   "start": 1417244.39,
+   "end": 1417254.62
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3632.csv",
+   "rows": 1024,
+   "start": 1417277.78,
+   "end": 1417288.01
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3640.csv",
+   "rows": 1024,
+   "start": 1417409.76,
+   "end": 1417419.99
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3642.csv",
+   "rows": 1024,
+   "start": 1417440.44,
+   "end": 1417450.67
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3646.csv",
+   "rows": 1024,
+   "start": 1417495.3,
+   "end": 1417505.53
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3648.csv",
+   "rows": 1024,
+   "start": 1417521.73,
+   "end": 1417531.96
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3658.csv",
+   "rows": 1024,
+   "start": 1417685.6,
+   "end": 1417695.83
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3704.csv",
+   "rows": 1024,
+   "start": 1501943.61,
+   "end": 1501953.84
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3708.csv",
+   "rows": 1024,
+   "start": 1501999.21,
+   "end": 1502009.44
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3732.csv",
+   "rows": 1024,
+   "start": 1502361.86,
+   "end": 1502372.09
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3736.csv",
+   "rows": 1024,
+   "start": 1502436.45,
+   "end": 1502446.68
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3740.csv",
+   "rows": 1024,
+   "start": 1503047.56,
+   "end": 1503057.79
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3756.csv",
+   "rows": 1024,
+   "start": 1503278.66,
+   "end": 1503288.89
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3762.csv",
+   "rows": 1024,
+   "start": 1503374.83,
+   "end": 1503385.06
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3776.csv",
+   "rows": 1024,
+   "start": 1519602.7,
+   "end": 1519612.93
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3786.csv",
+   "rows": 1024,
+   "start": 1519748.84,
+   "end": 1519759.07
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3796.csv",
+   "rows": 1024,
+   "start": 1519911.42,
+   "end": 1519921.65
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3802.csv",
+   "rows": 1024,
+   "start": 1521532.74,
+   "end": 1521542.97
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3806.csv",
+   "rows": 1024,
+   "start": 1521600.3,
+   "end": 1521610.53
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3808.csv",
+   "rows": 1024,
+   "start": 1521633.8,
+   "end": 1521644.03
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3816.csv",
+   "rows": 1024,
+   "start": 1521768.22,
+   "end": 1521778.45
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3818.csv",
+   "rows": 1024,
+   "start": 1521795.6,
+   "end": 1521805.83
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3826.csv",
+   "rows": 1024,
+   "start": 1522791.05,
+   "end": 1522801.28
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3864.csv",
+   "rows": 1024,
+   "start": 1524411.5,
+   "end": 1524421.73
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3872.csv",
+   "rows": 1024,
+   "start": 1601072.2,
+   "end": 1601082.43
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3876.csv",
+   "rows": 1024,
+   "start": 1601138.35,
+   "end": 1601148.58
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3882.csv",
+   "rows": 1024,
+   "start": 1601226.68,
+   "end": 1601236.91
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3884.csv",
+   "rows": 1024,
+   "start": 1601248.91,
+   "end": 1601259.14
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3886.csv",
+   "rows": 1024,
+   "start": 1601283.57,
+   "end": 1601293.8
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3888.csv",
+   "rows": 1024,
+   "start": 1601315.41,
+   "end": 1601325.64
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3908.csv",
+   "rows": 1024,
+   "start": 1601656.67,
+   "end": 1601666.9
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3912.csv",
+   "rows": 1024,
+   "start": 1602100.4,
+   "end": 1602110.63
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3916.csv",
+   "rows": 1024,
+   "start": 1602165.4,
+   "end": 1602175.63
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3924.csv",
+   "rows": 1024,
+   "start": 1602582.64,
+   "end": 1602592.87
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3926.csv",
+   "rows": 1024,
+   "start": 1602616.96,
+   "end": 1602627.19
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3930.csv",
+   "rows": 1024,
+   "start": 1602685.27,
+   "end": 1602695.5
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3932.csv",
+   "rows": 1024,
+   "start": 1602720.24,
+   "end": 1602730.47
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3936.csv",
+   "rows": 1024,
+   "start": 1602784.09,
+   "end": 1602794.32
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3940.csv",
+   "rows": 1024,
+   "start": 1617784.72,
+   "end": 1617794.95
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3942.csv",
+   "rows": 1024,
+   "start": 1617811.68,
+   "end": 1617821.91
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3944.csv",
+   "rows": 1024,
+   "start": 1617832.46,
+   "end": 1617842.69
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3946.csv",
+   "rows": 1024,
+   "start": 1617866.66,
+   "end": 1617876.89
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3948.csv",
+   "rows": 1024,
+   "start": 1618515.76,
+   "end": 1618525.99
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3950.csv",
+   "rows": 1024,
+   "start": 1618550.7,
+   "end": 1618560.93
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3952.csv",
+   "rows": 1024,
+   "start": 1618584.28,
+   "end": 1618594.51
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3954.csv",
+   "rows": 1024,
+   "start": 1618616.2,
+   "end": 1618626.43
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3958.csv",
+   "rows": 1024,
+   "start": 1618682.54,
+   "end": 1618692.77
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3964.csv",
+   "rows": 1024,
+   "start": 1618779.5,
+   "end": 1618789.73
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3978.csv",
+   "rows": 1024,
+   "start": 1618984.1,
+   "end": 1618994.33
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_3992.csv",
+   "rows": 1024,
+   "start": 1619302.79,
+   "end": 1619313.02
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4000.csv",
+   "rows": 1024,
+   "start": 1619421.95,
+   "end": 1619432.18
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4008.csv",
+   "rows": 1024,
+   "start": 1619563.51,
+   "end": 1619573.74
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4040.csv",
+   "rows": 1024,
+   "start": 1716202.9,
+   "end": 1716213.13
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4042.csv",
+   "rows": 1024,
+   "start": 1716240.91,
+   "end": 1716251.14
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4044.csv",
+   "rows": 1024,
+   "start": 1716274.99,
+   "end": 1716285.22
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4064.csv",
+   "rows": 1024,
+   "start": 1811154.5,
+   "end": 1811164.73
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4066.csv",
+   "rows": 1024,
+   "start": 1811185.21,
+   "end": 1811195.44
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4076.csv",
+   "rows": 1024,
+   "start": 1811332.43,
+   "end": 1811342.66
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4088.csv",
+   "rows": 1024,
+   "start": 1811534.35,
+   "end": 1811544.58
+  },
+  {
+   "role": "delivery",
+   "path": "data/roles/delivery/delivery_4094.csv",
+   "rows": 1024,
+   "start": 1811635.47,
+   "end": 1811645.7
+  }
+ ]
+}
