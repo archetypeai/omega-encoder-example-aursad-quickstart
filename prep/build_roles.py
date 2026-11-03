@@ -32,7 +32,7 @@ https://doi.org/10.5281/zenodo.4487073. Paper: arXiv:2102.01409.
 The original dataset and these derived files are licensed under the
 **Creative Commons Attribution 4.0 International License (CC BY 4.0)**:
 https://creativecommons.org/licenses/by/4.0/. The code in this repository is licensed
-separately.
+under the Apache License 2.0 (see `LICENSE`).
 
 ## Changes made to the original data
 

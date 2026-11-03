@@ -256,6 +256,11 @@ Alexandros Iosifidis (Aarhus University; Technicon ApS), [doi:10.5281/zenodo.448
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The files in `data/roles/` are derived from it; every change
 is listed in [data/roles/NOTICE.md](data/roles/NOTICE.md).
 
+## License
+
+The code is licensed under the [Apache License 2.0](LICENSE). The data in `data/roles/` is derived from AURSAD and
+licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see [data/roles/NOTICE.md](data/roles/NOTICE.md).
+
 ## Cleanup
 
 ```sh
