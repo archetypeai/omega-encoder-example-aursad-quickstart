@@ -3,11 +3,13 @@
 
     python prep/preflight_roles.py
 
-The agent runs as shipped for a developer: window 1,024, step 1,024, the first column as
-timestamp, every other numeric column embedded. So each file must be exactly `timestamp`
-+ the manifest's channels (no label or index column, which would be embedded as a
-sensor), exactly 1,024 rows (one window, one operation), on the 10 ms grid, with a
-filename no other upload shares. Labels must cover every scored file and nothing else,
+The agent takes the first column as timestamp and embeds every other numeric column. So
+each file must be exactly `timestamp` + the manifest's channels (no label or index column,
+which would be embedded as a sensor), exactly 1,024 rows (one operation), on the 10 ms
+grid, with a filename no other upload shares. Batch outputs are matched back to files by
+window start time, so start times must be unique. Each candidate window size must divide
+1,024: a file is then whole windows in batch, and a serving query is never shorter than
+its session's window (which the platform answers with a 503). Labels must cover every scored file and nothing else,
 the library must have none, and no session may be in two roles.
 Exit status is non-zero only on FAIL.
 """
@@ -20,7 +22,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from common import REPO, ROLES, SCORED, SUBSET, WINDOW, Report
+from common import CANDIDATE_WINDOWS, REPO, ROLES, SCORED, SUBSET, WINDOW, Report
 
 
 def main() -> int:
@@ -56,6 +58,11 @@ def main() -> int:
     r.add("PASS" if len(starts) == len(m["files"]) else "FAIL", "unique window start times",
           "every window starts at a different time (outputs map back to files by time)"
           if len(starts) == len(m["files"]) else "two windows share a start time")
+
+    bad = [w for w in CANDIDATE_WINDOWS if WINDOW % w]
+    r.add("FAIL" if bad else "PASS", "whole windows per operation",
+          f"windows {bad} do not divide {WINDOW}" if bad else
+          ", ".join(f"{w}: {WINDOW // w}" for w in CANDIDATE_WINDOWS) + " window(s) per operation, no remainder")
 
     sessions = {}
     for role in SCORED:

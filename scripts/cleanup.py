@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Delete everything embed/embed.py made on the platform.
+"""Delete everything embed/embed.py and serve/serve.py made on the platform.
 
     python scripts/cleanup.py            # list what would be deleted
     python scripts/cleanup.py --yes      # delete it
@@ -42,6 +42,9 @@ def main() -> None:
         blueprints = [b for b in blueprints if b.get("project_id") == prj]
         print(f"project {prj}: {len(sessions)} sessions, {len(deployments)} deployments, "
               f"{len(packages)} packages, {len(blueprints)} blueprints")
+        for d in deployments:
+            if d["kind"] == "serving" and d["status"] not in ("stopped", "failed"):
+                print(f"  serving deployment {d['id']} is {d['status']}: it holds a worker until it is ended")
         if not args.yes:
             continue
         failed = []
@@ -72,7 +75,8 @@ def main() -> None:
             print(f"deleted project {prj} and everything in it")
     if args.yes and STATE.exists():
         st = json.loads(STATE.read_text())
-        STATE.write_text(json.dumps({"uploads": st.get("uploads", {})}, indent=1))   # keep upload cache
+        keep = {k: st[k] for k in ("identity", "uploads") if k in st}             # keep the upload cache
+        STATE.write_text(json.dumps(keep, indent=1))
     if not args.yes:
         print("dry run; pass --yes to delete")
 

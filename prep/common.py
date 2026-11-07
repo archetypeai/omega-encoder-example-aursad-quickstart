@@ -8,7 +8,8 @@ RAW = REPO / "data" / "raw" / "AURSAD.h5"
 PREPARED = REPO / "data" / "prepared"
 ROLES = REPO / "data" / "roles"
 
-WINDOW = 1024            # the Omega Encoder agent's window for a developer (fixed): one operation
+WINDOW = 1024            # rows per operation (10.24 s at 100 Hz): one file
+CANDIDATE_WINDOWS = [1024, 512, 256]   # window sizes Stage 5 chooses from (each divides WINDOW)
 PRE_ONSET = 256          # the window starts this many rows (2.56 s) before the screwdriver's torque rises
 TORQUE_ON = 0.05         # Nm: "the screwdriver is acting" (current torque above this)
 SEED = 20260502          # fixes which operations are drawn
