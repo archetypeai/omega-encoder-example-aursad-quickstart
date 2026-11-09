@@ -39,7 +39,8 @@ import atai_api as A  # noqa: E402
 
 OUT = REPO / "out" / "embed"
 STATE = OUT / "state.json"
-PROJECT = "AURSAD Omega quickstart"
+PROJECT = "Omega Encoder AURSAD quickstart"
+OLD_PROJECTS = ("AURSAD Omega quickstart",)   # found and reused, never created
 OPERATION_ROWS = 1024
 _LOCK = threading.Lock()
 
@@ -79,10 +80,10 @@ def save_state(st: dict) -> None:
 
 def ensure_project(st: dict) -> str:
     if "project" not in st:
-        found = [p for p in A.request("GET", f"{A.api_base()}/projects?limit=1000")["data"] if p["name"] == PROJECT]
+        found = [p for p in A.request("GET", f"{A.api_base()}/projects?limit=1000")["data"] if p["name"] in (PROJECT, *OLD_PROJECTS)]
         st["project"] = found[0]["id"] if found else A.request(
             "POST", f"{A.api_base()}/projects",
-            body={"name": PROJECT, "description": "Omega Encoder agent + kNN anomaly detection on AURSAD"})["id"]
+            body={"name": PROJECT, "description": "Omega Encoder agent on AURSAD screwdriving"})["id"]
         save_state(st); log(f"project {st['project']}")
     return st["project"]
 

@@ -20,7 +20,7 @@ sys.path.insert(0, str(REPO))
 import atai_api as A  # noqa: E402
 
 STATE = REPO / "out" / "embed" / "state.json"
-PROJECT = "AURSAD Omega quickstart"
+PROJECTS = ("Omega Encoder AURSAD quickstart", "AURSAD Omega quickstart")   # the current name, then the old one
 
 
 def main() -> None:
@@ -28,7 +28,7 @@ def main() -> None:
     ap.add_argument("--yes", action="store_true", help="actually delete")
     args = ap.parse_args()
     A.load_dotenv(str(REPO / ".env"))
-    projects = [p["id"] for p in A.request("GET", f"{A.api_base()}/projects?limit=1000")["data"] if p["name"] == PROJECT]
+    projects = [p["id"] for p in A.request("GET", f"{A.api_base()}/projects?limit=1000")["data"] if p["name"] in PROJECTS]
     if not projects:
         print("nothing left")
         return

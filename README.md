@@ -88,7 +88,7 @@ project ─► blueprints ───┼─ copy omega-aursad-w512 (window 512)   
 
 | Object | Call | Here |
 |---|---|---|
-| project | `POST /api/projects` | `AURSAD Omega quickstart`, reused on reruns |
+| project | `POST /api/projects` | `Omega Encoder AURSAD quickstart`, reused on reruns |
 | blueprint | `POST /api/agents/blueprints/omega-embeddings/copy` | One copy per window size. `omega-aursad` runs as shipped (window 1,024, step 1,024). The others set the window at copy time: `"overrides": {"values": {"window_size": 256, "step_size": 256}}`. |
 | package | `POST /api/agents/packages` (`target: platform`) | Freezes a copy and its model (`newton-omega-1-5-safetensors`). |
 | deployment | `POST /api/agents/deployments` | `kind: batch`, one per window size, reused by Stages 4–7. `kind: serving` (Stage 8) is created and ended by `serve/serve.py`: while it runs it holds a worker. |
