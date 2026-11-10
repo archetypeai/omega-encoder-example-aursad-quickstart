@@ -12,6 +12,7 @@
     are checked against batch.
 - **Developer key only:** no admin role. The window size is set when the blueprint is copied (batch) or per serving
   session.
+- **Verified on dev and staging:** the same results on both, file for file (see [Results](#results-and-they-reproduce)).
 - **Data:** [AURSAD](https://doi.org/10.5281/zenodo.4487073) (CC BY 4.0): a UR3e cobot with an OnRobot screwdriver,
   100 Hz, labelled normal and faulty tightenings. The role files are committed, so you can skip the 6.4 GB download.
 
@@ -96,7 +97,7 @@ project ─► blueprints ───┼─ copy omega-aursad-w512 (window 512)   
 | session (serving) | `POST /api/agents/sessions` with `values` | Sets the window for this session only, over the shipped package: one serving deployment can serve any window. |
 | query | `POST /api/agents/sessions/{id}/query` | One operation: 12 lists of 1,024 numbers. Returns one record per window, `channel_0..11` (the file's column order), 768 numbers each. |
 
-What a developer key can do with the Omega Encoder agent (dev, 2026-11-06): everything above. Session `values` work on
+What a developer key can do with the Omega Encoder agent (dev 2026-11-06, staging 2026-11-09): everything above. Session `values` work on
 serving sessions only. A batch session refuses them (`422 values_not_supported`), so batch sets the window on the
 blueprint copy instead. A query shorter than its session's window gets a `503` rather than a clear error, which is one
 more reason for whole windows per operation.
@@ -111,6 +112,8 @@ ATAI_API_KEY=sk_...
 ATAI_API_ENDPOINT=https://platform.dev.u1.archetypeai.app/api
 EOF
 ```
+
+For staging, use `https://platform.stage.u1.archetypeai.app/api`. Values may be quoted (`KEY="..."`).
 
 Every command below runs as `python ...` in the activated venv. `.env` overrides anything exported in your shell, and
 every script that calls the platform prints the endpoint it uses first. Stages 0–3 need no API key.
@@ -289,6 +292,7 @@ Stage 8: 90 delivery operations served in 90 queries, window 256 (4 per operatio
   when `detect.py deliver --source serving` scores them. A library built in batch is therefore safe to use with live
   queries.
 - **About 1.5 s per tightening** at window 256 (4 windows), against 10.24 s for the tightening itself; ~0.6 s at 1,024.
+  Staging (2026-11-09): median 1.35 s, with the same 24 alarms and scores as dev.
 
 **Writes:** `eval_out/serving/delivery.{csv,json}` (a row per operation: score, alarm, latency, and batch's score and
 alarm) and `out/serve/w256/delivery.npz`.
@@ -309,7 +313,9 @@ The page shows the 12 channels, each tightening's window scores, the embedding s
 delivery's score so far. A full replay ends at Stage 7's result: 24 alarms, 19 of 30 faults
 caught, 5 of 60 false alarms. It holds a serving deployment while it runs; `npm run stop` ends it.
 
-## Results, and they reproduce (dev, developer key, 2026-11-06)
+## Results, and they reproduce
+
+Dev, developer key, 2026-11-06; reproduced on staging, 2026-11-09.
 
 Detection rate per anomaly type at the frozen 5% threshold, and AUROC against the role's normal operations. **Window
 256** is what `select` froze. **Window 1,024** is the same protocol limited to the shipped window
@@ -341,7 +347,8 @@ Reading it:
 
 **Reproduce:** the 1,024 path ran from scratch three times with two developer keys (2026-11-02 and 11-06), and every
 role file, selection and validation number was identical. The 1,024 test and delivery columns are from 11-02. The 256
-path ran once, on 11-06. Kept locally in `out/` and `eval_out/` (not committed): this run's ids, embeddings and outputs.
+path ran on dev on 11-06 and from scratch on staging on 11-09: the same frozen settings, the same test and
+delivery results, and serving scores identical to dev's. Kept locally in `out/` and `eval_out/` (not committed): this run's ids, embeddings and outputs.
 
 ## Repo layout
 

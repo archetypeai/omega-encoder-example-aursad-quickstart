@@ -8,7 +8,7 @@ the operation's window scores, an embedding space, and the delivery's scores so 
 
 > **It holds a serving deployment while it runs,** and ends it when you stop it. On dev
 > (2026-11-06) the deployment was ready in ~5 s, a tightening was answered in ~1.3 s (median),
-> and the whole delivery took ~3 min at 16×.
+> and the whole delivery took ~3 min at 16×. It also runs on staging (2026-11-09).
 
 ## Architecture
 
