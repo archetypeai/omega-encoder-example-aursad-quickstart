@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+"""Delete everything embed/embed.py and serve/serve.py made on the platform.
+
+    python scripts/cleanup.py            # list what would be deleted
+    python scripts/cleanup.py --yes      # delete it
+
+Works from the project, not just the state file, so it also finds what a killed run
+left behind: each package's deployments and their sessions, then the packages, the
+blueprint copy and the project. A second run finds nothing left. Uploaded files are kept.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO))
+import atai_api as A  # noqa: E402
+
+STATE = REPO / "out" / "embed" / "state.json"
+PROJECTS = ("Omega Encoder AURSAD quickstart",)
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--yes", action="store_true", help="actually delete")
+    args = ap.parse_args()
+    A.load_dotenv(str(REPO / ".env"))
+    projects = [p["id"] for p in A.list_all(f"{A.api_base()}/projects") if p["name"] in PROJECTS]
+    if not projects:
+        print("nothing left")
+        return
+    for prj in projects:
+        packages = A.list_all(f"{A.packages_url()}?project_id={prj}")
+        deployments = A.list_all(f"{A.deployments_url()}?project_id={prj}")
+        sessions = []
+        for d in deployments:
+            sessions += A.list_all(f"{A.sessions_url()}?deployment_id={d['id']}")
+        blueprints = A.list_all(f"{A.agents_base()}/blueprints?project_id={prj}")
+        blueprints = [b for b in blueprints if b.get("project_id") == prj]
+        print(f"project {prj}: {len(sessions)} sessions, {len(deployments)} deployments, "
+              f"{len(packages)} packages, {len(blueprints)} blueprints")
+        for d in deployments:
+            if d["kind"] == "serving" and d["status"] not in ("stopped", "failed"):
+                print(f"  serving deployment {d['id']} is {d['status']}: it holds a worker until it is ended")
+        if not args.yes:
+            continue
+        failed = []
+
+        def attempt(label: str, fn) -> None:
+            try:
+                fn()
+            except SystemExit as e:                   # atai_api exits on an HTTP error
+                failed.append(f"{label}: {str(e)[:200]}")
+
+        for s in sessions:
+            attempt(f"session {s['id']}", lambda s=s: A.end_session(s["id"]))
+        for d in deployments:
+            attempt(f"deployment {d['id']}", lambda d=d: A.end_deployment(d["id"]))
+        for p in packages:
+            attempt(f"package {p['id']}", lambda p=p: A.request("DELETE", A.packages_url(p["id"]), raw=True))
+        for b in blueprints:
+            attempt(f"blueprint {b['blueprint_key']}", lambda b=b: A.request(
+                "DELETE", f"{A.agents_base()}/blueprints/{b['id']}", raw=True))
+        attempt(f"project {prj}", lambda: A.request("DELETE", f"{A.api_base()}/projects/{prj}", raw=True))
+        if failed:
+            print(f"project {prj}: {len(failed)} objects could not be deleted:")
+            for f in failed:
+                print(f"  {f}")
+        else:
+            print(f"deleted project {prj} and everything in it")
+    if args.yes and STATE.exists():
+        st = json.loads(STATE.read_text())
+        keep = {k: st[k] for k in ("identity", "uploads") if k in st}             # keep the upload cache
+        STATE.write_text(json.dumps(keep, indent=1))
+    if not args.yes:
+        print("dry run; pass --yes to delete")
+
+
+if __name__ == "__main__":
+    main()
