@@ -36,17 +36,17 @@ under the Apache License 2.0 (see `LICENSE`).
 
 ## Changes made to the original data
 
-- **Subset:** {n_ops} of the 2,042 labelled tightening samples (seed {seed}), drawn per
+- **Subset:** {n_ops} of the 2,042 labelled tightenings in the four classes kept (seed {seed}), drawn per
   role and class as in `prep/common.py` (`SUBSET`). Classes kept: normal, damaged screw,
-  extra assembly component, missing screw. The 3 damaged-plate-thread samples and all
-  loosening samples are not included.
+  extra assembly component, missing screw. The dataset's other classes, 3 damaged-plate-thread samples and all
+  loosening samples, are not included.
 - **Roles by recording session:** library sessions 0-4, validation 5-8, test 9-13,
   delivery 14-18 (the original file's timestamps restart in each of its 19 sessions).
 - **Windows:** each operation is 1,024 consecutive rows (10.24 s at 100 Hz) of the original
   recording, starting 256 rows before the screwdriver's current torque first exceeds
   0.05 Nm in that sample. A window can include rows of the neighbouring robot motion.
   Windows whose original timestamps jump by more than 0.1 s were not used.
-- **Channels:** 12 of the 125 features, renamed: {channel_map}.
+- **Channels:** 12 of the dataset's 125 features (its file has 134 columns), renamed: {channel_map}.
 - **Values:** z-scored per channel with the library operations' mean and std
   (`manifest.json` holds both, to undo it).
 - **Timestamps:** re-gridded to an exact 10 ms step from each window's first original

@@ -6,9 +6,9 @@ screwdriving operation at a time, as if the robot cell were running now. Each ti
 the embeddings with the **kNN detector Stage 5 froze**. The answers appear as the 12 live channels,
 the operation's window scores, an embedding space, and the delivery's scores so far.
 
-> **It holds a serving deployment while it runs,** and ends it when you stop it. On dev
-> (2026-11-06) the deployment was ready in ~5 s, a tightening was answered in ~1.3 s (median),
-> and the whole delivery took ~3 min at 16×. It also runs on staging (2026-11-09).
+> **It holds a serving deployment while it runs,** and ends it when you stop it. The deployment
+> is ready in ~5 s, a tightening is answered in ~1.3 s (median), and the whole delivery takes
+> ~3 min at 16×.
 
 ## Architecture
 
@@ -53,11 +53,11 @@ the operation's window scores, an embedding space, and the delivery's scores so 
   score: a false alarm looks like one.
 - **The API key never reaches the browser.** The bridge reads `ATAI_API_ENDPOINT` and
   `ATAI_API_KEY` from the repo's `.env`, the same file the Python stages use. As in
-  `atai_api.py`, those lines win over anything exported in the shell. An `ATAI_*` line in
+  `atai_api.py`, a variable already exported in the shell wins over it. An `ATAI_*` line in
   `app-serving/.env` is ignored.
 - **It holds the deployment for as long as it runs, and says what it's doing.** Starting
-  retries (15 s, doubling to 2 min) while no serving worker is free. On dev, a session closes after
-  30 idle minutes and a deployment stops after 20. If that happens during a long pause, the bridge
+  retries (15 s, doubling to 2 min) while no serving worker is free. A session closes after
+  30 idle minutes, and the platform can stop an idle deployment. If that happens during a long pause, the bridge
   replaces both on the next operation. The phase (starting, waiting, running, replacing, stopped)
   goes out on `omega/agent`, retained, and shows in the menubar badge and in Settings. An MQTT
   will clears a stale "running" if the bridge is killed.
@@ -116,7 +116,7 @@ At the end, the totals under the score chart read **Alarms 24, Caught 19 / 30, F
 
 ### What's on the page
 
-The same workbench as the sibling monitors (AD TEP, OSM LARCO, RED pump): what goes into the
+The same workbench as the other example apps ([TEP](https://github.com/archetypeai/anomaly-discovery-agent-example-tep-quickstart), [LARCO](https://github.com/archetypeai/operational-state-monitoring-agent-example-larco-quickstart), [water pump](https://github.com/archetypeai/rare-event-detection-agent-example-pump-quickstart)): what goes into the
 agent on the left, what comes out on the right.
 
 | Where | What |
@@ -143,7 +143,7 @@ A tightening scores the same at any pace: the pace only decides how fast its row
 ## Stop and clean up
 
 A running app holds a serving deployment, and so a serving worker, until the bridge ends it or
-the platform stops it after 20 idle minutes (dev). Closing the browser tab doesn't stop it.
+the platform stops it for being idle. Closing the browser tab doesn't stop it.
 
 1. **Stop the app.** Press Ctrl-C **once** in the `npm run dev` terminal and wait for
    `bridge: ended session ses_… and deployment dpl_…`; a second Ctrl-C can cut that short. Or,
@@ -167,8 +167,8 @@ the platform stops it after 20 idle minutes (dev). Closing the browser tab doesn
 |---|---|---|
 | 1893 | 9011 | 5183 |
 
-They follow the canonical-agent apps' allocation, past the AD TEP served app (1890 / 9008 /
-5180) and the two slots after it, so they can run side by side. To change them, copy
+They are chosen not to clash with the other example apps (the TEP app uses 1890 / 9008 / 5180,
+and two more slots follow it), so they can run side by side. To change them, copy
 `.env.example` to `.env`.
 
 ## Layout
@@ -187,4 +187,5 @@ They follow the canonical-agent apps' allocation, past the AD TEP served app (18
 ## Licence and data
 
 The same as the repo: code under the [Apache License 2.0](../LICENSE); the data is derived from
-AURSAD (CC BY 4.0), see [data/roles/NOTICE.md](../data/roles/NOTICE.md).
+AURSAD (CC BY 4.0), see [data/roles/NOTICE.md](../data/roles/NOTICE.md), and so is
+`static/library-view.json`.

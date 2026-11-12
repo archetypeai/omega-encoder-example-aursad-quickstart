@@ -12,7 +12,7 @@
     are checked against batch.
 - **Developer key only:** no admin role. The window size is set when the blueprint is copied (batch) or per serving
   session.
-- **Verified on dev and staging:** the same results on both, file for file (see [Results](#results-and-they-reproduce)).
+- **Verified on production** (2026-11-12): the same results as earlier runs, number for number (see [Results](#results-and-they-reproduce)).
 - **Data:** [AURSAD](https://doi.org/10.5281/zenodo.4487073) (CC BY 4.0): a UR3e cobot with an OnRobot screwdriver,
   100 Hz, labelled normal and faulty tightenings. The role files are committed, so you can skip the 6.4 GB download.
 
@@ -97,7 +97,7 @@ project ─► blueprints ───┼─ copy omega-aursad-w512 (window 512)   
 | session (serving) | `POST /api/agents/sessions` with `values` | Sets the window for this session only, over the shipped package: one serving deployment can serve any window. |
 | query | `POST /api/agents/sessions/{id}/query` | One operation: 12 lists of 1,024 numbers. Returns one record per window, `channel_0..11` (the file's column order), 768 numbers each. |
 
-What a developer key can do with the Omega Encoder agent (dev 2026-11-06, staging 2026-11-09): everything above. Session `values` work on
+What a developer key can do with the Omega Encoder agent (production, 2026-11-12): everything above. Session `values` work on
 serving sessions only. A batch session refuses them (`422 values_not_supported`), so batch sets the window on the
 blueprint copy instead. A query shorter than its session's window gets a `503` rather than a clear error, which is one
 more reason for whole windows per operation.
@@ -109,14 +109,15 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 source .venv/bin/activate          # every command below assumes the venv is active
 cat > .env <<EOF
 ATAI_API_KEY=sk_...
-ATAI_API_ENDPOINT=https://platform.dev.u1.archetypeai.app/api
+ATAI_API_ENDPOINT=https://platform.u1.archetypeai.app/api
 EOF
 ```
 
-For staging, use `https://platform.stage.u1.archetypeai.app/api`. Values may be quoted (`KEY="..."`).
+Values may be quoted (`KEY="..."`).
 
-Every command below runs as `python ...` in the activated venv. `.env` overrides anything exported in your shell, and
-every script that calls the platform prints the endpoint it uses first. Stages 0–3 need no API key.
+Every command below runs as `python ...` in the activated venv. A variable already exported in your shell wins over
+`.env` (check `env | grep ATAI` if a key meant for another deployment answers 401), and every stage that embeds or
+serves prints the endpoint it uses first. Stages 0–3 need no API key.
 
 **Shortcut:** the role files are committed. To skip the download, start at Stage 3.
 
@@ -280,19 +281,19 @@ one tightening in one round trip, with no upload, queue or polling: what the cel
 4. **Every answer checked against Stage 7:** each window's embedding, each operation's score, each alarm.
 5. **Cleanup:** the session and deployment are ended however the run ends (Ctrl-C and SIGTERM included).
 
-**Expect** (dev, 2026-11-06):
+**Expect** (production, 2026-11-12):
 
 ```
 Stage 8: 90 delivery operations served in 90 queries, window 256 (4 per operation); 24 alarm(s)
-  latency per query: median 1507 ms, p95 1570 ms, max 1621 ms
+  latency per query: median 1296 ms, p95 1980 ms, max 2040 ms
   against Stage 7 (batch): embeddings cosine min 0.999923 (median 1.000000) over 4320 window-channels; alarm identical in 90/90; score max relative difference 6.5e-04
 ```
 
 - **The served agent gives the batch delivery's answers:** every alarm, and the same detection and false-alarm rates
   when `detect.py deliver --source serving` scores them. A library built in batch is therefore safe to use with live
   queries.
-- **About 1.5 s per tightening** at window 256 (4 windows), against 10.24 s for the tightening itself; ~0.6 s at 1,024.
-  Staging (2026-11-09): median 1.35 s, with the same 24 alarms and scores as dev.
+- **About 1.3–1.5 s per tightening** at window 256 (4 windows), against 10.24 s for the tightening itself; ~0.6 s at
+  1,024. Earlier runs gave the same 24 alarms and scores.
 
 **Writes:** `eval_out/serving/delivery.{csv,json}` (a row per operation: score, alarm, latency, and batch's score and
 alarm) and `out/serve/w256/delivery.npz`.
@@ -315,7 +316,7 @@ caught, 5 of 60 false alarms. It holds a serving deployment while it runs; `npm 
 
 ## Results, and they reproduce
 
-Dev, developer key, 2026-11-06; reproduced on staging, 2026-11-09.
+Production, developer key, 2026-11-12, in a new project; the same numbers as earlier runs.
 
 Detection rate per anomaly type at the frozen 5% threshold, and AUROC against the role's normal operations. **Window
 256** is what `select` froze. **Window 1,024** is the same protocol limited to the shipped window
@@ -347,8 +348,8 @@ Reading it:
 
 **Reproduce:** the 1,024 path ran from scratch three times with two developer keys (2026-11-02 and 11-06), and every
 role file, selection and validation number was identical. The 1,024 test and delivery columns are from 11-02. The 256
-path ran on dev on 11-06 and from scratch on staging on 11-09: the same frozen settings, the same test and
-delivery results, and serving scores identical to dev's. Kept locally in `out/` and `eval_out/` (not committed): this run's ids, embeddings and outputs.
+path ran three times, the last from scratch on production on 11-12: the same frozen settings, the same test and
+delivery results, and the same serving scores each time. Kept locally in `out/` and `eval_out/` (not committed): this run's ids, embeddings and outputs.
 
 ## Repo layout
 
@@ -380,7 +381,8 @@ while it is running. A deployment must go before its package, and a package befo
 ## Licence
 
 The code is licensed under the [Apache License 2.0](LICENSE). The data in `data/roles/` is derived from AURSAD and
-licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see [data/roles/NOTICE.md](data/roles/NOTICE.md).
+licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see [data/roles/NOTICE.md](data/roles/NOTICE.md). So is
+`app-serving/static/library-view.json`, a 2-D projection of the library's embeddings.
 
 ## Data attribution
 
