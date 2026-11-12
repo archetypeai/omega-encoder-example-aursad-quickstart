@@ -24,7 +24,7 @@
  * - ONE SERVING WORKER, HELD WHILE THIS RUNS. On exit the session and the deployment
  *   are ended; their ids sit in out/app_serving_state.json until then, and the next
  *   start ends whatever an earlier bridge left. A session closed after 30 idle minutes
- *   (or a deployment stopped after 20, on dev) is replaced on the next operation.
+ *   (or a deployment the platform stopped) is replaced on the next operation.
  * - THE PAGE SEES THE AGENT'S PHASE on `omega/agent` (retained): starting, waiting,
  *   running, replacing, stopped. An MQTT will clears a stale "running" if this process
  *   dies without saying so.
@@ -342,9 +342,13 @@ client.on('connect', async () => {
 	const left = readJson(STATE);
 	if (left) {
 		console.log(`bridge: ending what an earlier bridge left (session ${left.session}, deployment ${left.deployment})`);
-		await end('sessions', left.session);
-		await end('deployments', left.deployment);
-		fs.rmSync(STATE, { force: true });
+		const sessionEnded = await end('sessions', left.session);
+		const ended = (await end('deployments', left.deployment)) && sessionEnded;
+		if (ended) fs.rmSync(STATE, { force: true });
+		else {
+			console.error(`bridge: could not end what an earlier bridge left; run python scripts/cleanup.py --yes`);
+			process.exit(1);
+		}
 	}
 	await startWithRetry();
 });

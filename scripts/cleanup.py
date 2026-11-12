@@ -20,7 +20,7 @@ sys.path.insert(0, str(REPO))
 import atai_api as A  # noqa: E402
 
 STATE = REPO / "out" / "embed" / "state.json"
-PROJECTS = ("Omega Encoder AURSAD quickstart", "AURSAD Omega quickstart")   # the current name, then the old one
+PROJECTS = ("Omega Encoder AURSAD quickstart",)
 
 
 def main() -> None:
@@ -28,17 +28,17 @@ def main() -> None:
     ap.add_argument("--yes", action="store_true", help="actually delete")
     args = ap.parse_args()
     A.load_dotenv(str(REPO / ".env"))
-    projects = [p["id"] for p in A.request("GET", f"{A.api_base()}/projects?limit=1000")["data"] if p["name"] in PROJECTS]
+    projects = [p["id"] for p in A.list_all(f"{A.api_base()}/projects") if p["name"] in PROJECTS]
     if not projects:
         print("nothing left")
         return
     for prj in projects:
-        packages = A.request("GET", f"{A.packages_url()}?project_id={prj}&limit=1000")["data"]
-        deployments = A.request("GET", f"{A.deployments_url()}?project_id={prj}&limit=1000")["data"]
+        packages = A.list_all(f"{A.packages_url()}?project_id={prj}")
+        deployments = A.list_all(f"{A.deployments_url()}?project_id={prj}")
         sessions = []
         for d in deployments:
-            sessions += A.request("GET", f"{A.sessions_url()}?deployment_id={d['id']}&limit=1000")["data"]
-        blueprints = A.request("GET", f"{A.agents_base()}/blueprints?project_id={prj}&limit=1000")["data"]
+            sessions += A.list_all(f"{A.sessions_url()}?deployment_id={d['id']}")
+        blueprints = A.list_all(f"{A.agents_base()}/blueprints?project_id={prj}")
         blueprints = [b for b in blueprints if b.get("project_id") == prj]
         print(f"project {prj}: {len(sessions)} sessions, {len(deployments)} deployments, "
               f"{len(packages)} packages, {len(blueprints)} blueprints")
@@ -56,21 +56,19 @@ def main() -> None:
                 failed.append(f"{label}: {str(e)[:200]}")
 
         for s in sessions:
-            attempt(f"session {s['id']}", lambda: A.end_session(s["id"]))
+            attempt(f"session {s['id']}", lambda s=s: A.end_session(s["id"]))
         for d in deployments:
-            attempt(f"deployment {d['id']}", lambda: A.end_deployment(d["id"]))
+            attempt(f"deployment {d['id']}", lambda d=d: A.end_deployment(d["id"]))
         for p in packages:
-            attempt(f"package {p['id']}", lambda: A.request("DELETE", A.packages_url(p["id"]), raw=True))
-        # Promoted blueprints first: a copy can't go while a blueprint promoted from it remains.
-        for b in sorted(blueprints, key=lambda b: "-otr_" not in b["blueprint_key"]):
-            attempt(f"blueprint {b['blueprint_key']}", lambda: A.request(
+            attempt(f"package {p['id']}", lambda p=p: A.request("DELETE", A.packages_url(p["id"]), raw=True))
+        for b in blueprints:
+            attempt(f"blueprint {b['blueprint_key']}", lambda b=b: A.request(
                 "DELETE", f"{A.agents_base()}/blueprints/{b['id']}", raw=True))
         attempt(f"project {prj}", lambda: A.request("DELETE", f"{A.api_base()}/projects/{prj}", raw=True))
         if failed:
             print(f"project {prj}: {len(failed)} objects could not be deleted:")
             for f in failed:
                 print(f"  {f}")
-            print("  Delete what is listed, or ask an org admin if it is a promoted blueprint.")
         else:
             print(f"deleted project {prj} and everything in it")
     if args.yes and STATE.exists():

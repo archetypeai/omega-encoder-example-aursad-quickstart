@@ -80,6 +80,13 @@ def main() -> None:
     log(f"frozen settings: {D.describe(cfg)}, threshold {cfg['threshold']:.4f}")
 
     st = E.load_state()
+    left = st.get("serving") or {}
+    for label, ident, fn in (("session", left.get("session"), A.end_session),
+                             ("deployment", left.get("deployment"), A.end_deployment)):
+        if ident:                             # a serving replay killed before its cleanup
+            log(f"ending the serving {label} {ident} an earlier run left")
+            fn(ident)
+    st.pop("serving", None); E.save_state(st)
     ws = E.ensure_package(st, E.OPERATION_ROWS)          # the shipped copy, window 1,024
     signal.signal(signal.SIGTERM, lambda *_: (_ for _ in ()).throw(KeyboardInterrupt()))
     dpl = sid = None
@@ -88,7 +95,7 @@ def main() -> None:
         dpl = A.request("POST", A.deployments_url(), body={
             "package_id": ws["package"], "kind": "serving", "sessions": {"max": 2}})["id"]
         st["serving"] = {"deployment": dpl}; E.save_state(st)
-        A._wait_for(A.deployments_url(dpl), "ready", "deploying", 600)
+        A.deployment_ready(dpl)
         log(f"serving deployment {dpl} of {ws['package']} (omega-aursad, window 1,024) ready")
         sid = A.request("POST", A.sessions_url(), body={
             "deployment_id": dpl, "values": {"window_size": window, "step_size": window}})["id"]
@@ -98,7 +105,8 @@ def main() -> None:
         for i, f in enumerate(files, 1):
             df = pd.read_csv(REPO / f["path"])
             t = time.time()
-            answer = A.request("POST", f"{A.sessions_url(sid)}/query", body=query_body(df, m["channels"]))
+            answer = A.request("POST", f"{A.sessions_url(sid)}/query", body=query_body(df, m["channels"]),
+                               idempotent=True)   # a repeated query only asks again
             latency = time.time() - t
             emb = windows_of(answer, len(m["channels"]))
             if len(emb) != E.OPERATION_ROWS // window:
@@ -113,13 +121,16 @@ def main() -> None:
     except KeyboardInterrupt:
         log("interrupted")
     finally:
+        ended = True
         for label, fn in (("session", lambda: A.end_session(sid)), ("deployment", lambda: A.end_deployment(dpl))):
             if (sid if label == "session" else dpl):
                 try:
                     fn()
                 except BaseException as e:
+                    ended = False
                     log(f"could not end the serving {label}: {str(e)[:200]} (run scripts/cleanup.py)")
-        st.pop("serving", None); E.save_state(st)
+        if ended:                             # otherwise the ids stay for the next run and cleanup.py
+            st.pop("serving", None); E.save_state(st)
         if dpl:
             log(f"ended serving session {sid} and deployment {dpl}")
     if not rows:
