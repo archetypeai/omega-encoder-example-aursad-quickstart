@@ -119,6 +119,8 @@ Every command below runs as `python ...` in the activated venv. A variable alrea
 `.env` (check `env | grep ATAI` if a key meant for another deployment answers 401), and every stage that embeds or
 serves prints the endpoint it uses first. Stages 0–3 need no API key.
 
+**On the free trial** (`ATAI_API_ENDPOINT=https://try.archetypeai.app/api`): the Omega Encoder agent is available there too (as of November 2026), so the same commands should work with a free-trial key. This example was measured on production and hasn't been run on the free trial, where an organization runs at most 3 jobs at once and every job stops after 2 hours (see the [OSM quickstart's notes on the free trial](https://github.com/archetypeai/operational-state-monitoring-agent-example-larco-quickstart#on-the-free-trial)), so expect different timings.
+
 **Shortcut:** the role files are committed. To skip the download, start at Stage 3.
 
 ## The stages
